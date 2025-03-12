@@ -1,0 +1,52 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:chicchicProgForHaircuts.ViewModels"
+             xmlns:conv="using:chicchicProgForHaircuts.Materials"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="chicchicProgForHaircuts.Views.MainScreen"
+             x:DataType="vm:MainWindowViewModel">
+
+	<UserControl.Resources>
+		<!-- Добавление конвертера в ресурсы -->
+		<conv:HairCutImageConverter x:Key="myImageConverter"/>
+	</UserControl.Resources>
+
+	<Grid ColumnDefinitions="550,*" RowDefinitions="50, 30, *, 50" Margin="10">
+		
+		<TextBlock Text="Добро пожаловать!" Grid.ColumnSpan="2" Grid.Row="0" Classes="Header" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		
+		<!-- Левый столбец (меню) -->
+		<StackPanel Grid.Row="2" Grid.Column="0" Spacing="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+			<Button Content="Профиль" Width="180" Height="50" Classes="ButtonTemplate" />
+			<Button Content="Записаться на стрижку" Command="{Binding GoToRegOnHairCut}" Width="180" Height="50" Classes="ButtonTemplate" />
+		</StackPanel>
+
+		<TextBlock Text="Каталог" Grid.Column="1" Grid.Row="1"  FontSize="20" Classes="Default" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+		<!-- Правый столбец (список стрижек) -->
+		<ListBox Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Haircuts}">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal" Spacing="10">
+						<!-- Фото стрижки -->
+						<Border Width="101" Height="101" BorderBrush="Black" BorderThickness="1">
+							<Image Source="{Binding Photo, Converter={StaticResource myImageConverter}}" Width="100" Height="100" />
+						</Border>
+						<StackPanel Orientation="Vertical">
+							<!-- Название стрижки -->
+							<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" />
+
+							<!-- Пол (Gender) -->
+							<TextBlock Text="{Binding GenderNavigation.HairgenderName}" FontSize="14" />
+
+							<!-- Цена -->
+							<TextBlock Text="{Binding Price, StringFormat='Цена: {0:C}'}" FontSize="14" Foreground="Green" />
+						</StackPanel>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+	</Grid>
+</UserControl>

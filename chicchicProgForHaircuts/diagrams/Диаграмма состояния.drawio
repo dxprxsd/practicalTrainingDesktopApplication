@@ -1,0 +1,217 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 YaBrowser/25.2.0.0 Safari/537.36" version="26.1.0">
+  <diagram name="Страница — 1" id="_JtVkiYtL2jWx4ZhkG_M">
+    <mxGraphModel dx="1599" dy="1077" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-1" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="202.5" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-2" value="Создание записи на стрижку" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" vertex="1" parent="1">
+          <mxGeometry x="155" y="170" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-3" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;curved=1;" edge="1" source="7Jz3YPbekmTBqTyS7CcT-2" parent="1" target="7Jz3YPbekmTBqTyS7CcT-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="215" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-5" value="Клиент выбирает стрижку,&amp;nbsp;&lt;div&gt;дату и время,&amp;nbsp;&lt;/div&gt;&lt;div&gt;подтверждает запись.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;" vertex="1" connectable="0" parent="7Jz3YPbekmTBqTyS7CcT-3">
+          <mxGeometry x="-0.2601" y="1" relative="1" as="geometry">
+            <mxPoint x="84" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-4" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-1" target="7Jz3YPbekmTBqTyS7CcT-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="180" as="targetPoint" />
+            <mxPoint x="260" y="120" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-6" value="Запись подтверждена" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" vertex="1" parent="1">
+          <mxGeometry x="155" y="290" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-8" value="Записан на стрижку" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" vertex="1" parent="1">
+          <mxGeometry x="155" y="400" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-9" value="Стрижка в процессе" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" vertex="1" parent="1">
+          <mxGeometry x="152.5" y="510" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-10" value="Стрижка завершена" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" vertex="1" parent="1">
+          <mxGeometry x="155" y="620" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-17" value="Скидка применена" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" vertex="1" parent="1">
+          <mxGeometry x="260" y="780" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-18" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-2" target="7Jz3YPbekmTBqTyS7CcT-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="62" y="290" as="targetPoint" />
+            <mxPoint x="225" y="220" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-50" y="190" />
+              <mxPoint x="-50" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-19" value="Клиент решает отменить&lt;div&gt;&amp;nbsp;запись на стрижку.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;rotation=270;" vertex="1" connectable="0" parent="7Jz3YPbekmTBqTyS7CcT-18">
+          <mxGeometry x="-0.2601" y="1" relative="1" as="geometry">
+            <mxPoint x="-23" y="-151" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-20" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-6" target="7Jz3YPbekmTBqTyS7CcT-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="165" y="430" as="targetPoint" />
+            <mxPoint x="165" y="200" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="218" y="420" />
+              <mxPoint x="218" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-21" value="Запись подтверждена&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;и&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;закреплена&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;за клиентом,&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div&gt;дата стрижки назначена.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;" vertex="1" connectable="0" parent="7Jz3YPbekmTBqTyS7CcT-20">
+          <mxGeometry x="-0.2601" y="1" relative="1" as="geometry">
+            <mxPoint x="82" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-24" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-8" target="7Jz3YPbekmTBqTyS7CcT-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="510" as="targetPoint" />
+            <mxPoint x="340" y="440" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="218" y="470" />
+              <mxPoint x="218" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-25" value="Клиент пришел в&amp;nbsp;&lt;div&gt;парикмахерскую,&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;начинается&amp;nbsp;&lt;/span&gt;&lt;div&gt;процесс выполнения стрижки.&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;" vertex="1" connectable="0" parent="7Jz3YPbekmTBqTyS7CcT-24">
+          <mxGeometry x="-0.2601" y="1" relative="1" as="geometry">
+            <mxPoint x="91" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-26" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-9" target="7Jz3YPbekmTBqTyS7CcT-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="620" as="targetPoint" />
+            <mxPoint x="250" y="550" as="sourcePoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-27" value="Мастер завершил&amp;nbsp;&lt;div&gt;выполнение стрижки.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;" vertex="1" connectable="0" parent="7Jz3YPbekmTBqTyS7CcT-26">
+          <mxGeometry x="-0.2601" y="1" relative="1" as="geometry">
+            <mxPoint x="82" y="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-28" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-10" target="7Jz3YPbekmTBqTyS7CcT-50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="217.5" y="740" as="targetPoint" />
+            <mxPoint x="228" y="560" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="120" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-29" value="Услуга завершена,&amp;nbsp;&lt;div&gt;итоговая стоимость&amp;nbsp;&lt;/div&gt;&lt;div&gt;рассчитывается без учета&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;скидки (у клиента было&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;менее 5 стрижек&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;).&lt;/span&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;" vertex="1" connectable="0" parent="7Jz3YPbekmTBqTyS7CcT-28">
+          <mxGeometry x="-0.2601" y="1" relative="1" as="geometry">
+            <mxPoint x="79" y="50" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-30" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-10" target="7Jz3YPbekmTBqTyS7CcT-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="1025" as="targetPoint" />
+            <mxPoint x="250" y="770" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="323" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-31" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%D0%A3%D1%81%D0%BB%D1%83%D0%B3%D0%B0%20%D0%B7%D0%B0%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D0%B0%2C%26amp%3Bnbsp%3B%26lt%3Bdiv%26gt%3B%D0%B8%D1%82%D0%BE%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%26amp%3Bnbsp%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%D1%80%D0%B0%D1%81%D1%81%D1%87%D0%B8%D1%82%D1%8B%D0%B2%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D0%B1%D0%B5%D0%B7%20%D1%83%D1%87%D0%B5%D1%82%D0%B0%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Bbackground-color%3A%20transparent%3B%20color%3A%20light-dark(rgb(0%2C%200%2C%200)%2C%20rgb(255%2C%20255%2C%20255))%3B%26quot%3B%26gt%3B%D1%81%D0%BA%D0%B8%D0%B4%D0%BA%D0%B8%20(%D1%83%20%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B0%20%D0%B1%D1%8B%D0%BB%D0%BE%26lt%3B%2Fspan%26gt%3B%26lt%3B%2Fdiv%26gt%3B%26lt%3Bdiv%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Bbackground-color%3A%20transparent%3B%20color%3A%20light-dark(rgb(0%2C%200%2C%200)%2C%20rgb(255%2C%20255%2C%20255))%3B%26quot%3B%26gt%3B%D0%BC%D0%B5%D0%BD%D0%B5%D0%B5%205%20%D1%81%D1%82%D1%80%D0%B8%D0%B6%D0%B5%D0%BA%26lt%3B%2Fspan%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Bbackground-color%3A%20transparent%3B%20color%3A%20light-dark(rgb(0%2C%200%2C%200)%2C%20rgb(255%2C%20255%2C%20255))%3B%26quot%3B%26gt%3B).%26lt%3B%2Fspan%26gt%3B%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22edgeLabel%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3BfontSize%3D12%3BlabelBackgroundColor%3Dnone%3B%22%20vertex%3D%221%22%20connectable%3D%220%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22200%22%20y%3D%22720%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;" vertex="1" connectable="0" parent="7Jz3YPbekmTBqTyS7CcT-30">
+          <mxGeometry x="-0.2601" y="1" relative="1" as="geometry">
+            <mxPoint x="76" y="55" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-34" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="202.5" y="990" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-35" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;curved=1;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-37" target="7Jz3YPbekmTBqTyS7CcT-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="228" y="180" as="targetPoint" />
+            <mxPoint x="217.5" y="950.0000000000002" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="218" y="970" />
+              <mxPoint x="218" y="970" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-37" value="Завершённый заказ" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" vertex="1" parent="1">
+          <mxGeometry x="157.5" y="910" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-40" value="Клиент решает создать&lt;div&gt;&amp;nbsp;запись на стрижку.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;rotation=0;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="299.9966666666668" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-43" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-6" target="7Jz3YPbekmTBqTyS7CcT-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="165" y="940" as="targetPoint" />
+            <mxPoint x="165" y="200" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-10" y="310" />
+              <mxPoint x="-10" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-44" value="Клиент решает отменить&lt;div&gt;&amp;nbsp;запись на стрижку.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;rotation=-90;" vertex="1" connectable="0" parent="7Jz3YPbekmTBqTyS7CcT-43">
+          <mxGeometry x="-0.2601" y="1" relative="1" as="geometry">
+            <mxPoint x="-23" y="-108" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-45" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-8" target="7Jz3YPbekmTBqTyS7CcT-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="165" y="940" as="targetPoint" />
+            <mxPoint x="165" y="320" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="40" y="420" />
+              <mxPoint x="40" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-46" value="Клиент решает отменить&lt;div&gt;&amp;nbsp;запись на стрижку.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;rotation=-90;" vertex="1" connectable="0" parent="7Jz3YPbekmTBqTyS7CcT-45">
+          <mxGeometry x="-0.2601" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-80" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-50" value="Скидка не применена" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;" vertex="1" parent="1">
+          <mxGeometry x="60" y="780" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-51" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-17" target="7Jz3YPbekmTBqTyS7CcT-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="403" y="800" as="targetPoint" />
+            <mxPoint x="290" y="770" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="323" y="880" />
+              <mxPoint x="250" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-54" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;fontSize=12;" edge="1" parent="1" source="7Jz3YPbekmTBqTyS7CcT-50" target="7Jz3YPbekmTBqTyS7CcT-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="920" as="targetPoint" />
+            <mxPoint x="340" y="830" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="120" y="880" />
+              <mxPoint x="190" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-57" value="Завершить оплату" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="7Jz3YPbekmTBqTyS7CcT-54">
+          <mxGeometry x="-0.4582" y="4" relative="1" as="geometry">
+            <mxPoint x="-14" y="27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-55" value="Услуга завершена,&amp;nbsp;&lt;div&gt;итоговая стоимость&amp;nbsp;&lt;/div&gt;&lt;div&gt;рассчитывается с учетом&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;скидки (у клиента было&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;5 или более стрижек&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;).&lt;/span&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=none;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="400" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="7Jz3YPbekmTBqTyS7CcT-58" value="Завершить оплату" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="170" y="899.9982608695652" as="geometry">
+            <mxPoint x="146" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

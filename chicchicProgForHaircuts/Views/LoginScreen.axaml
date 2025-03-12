@@ -1,0 +1,41 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:vm="using:chicchicProgForHaircuts.ViewModels"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="chicchicProgForHaircuts.Views.LoginScreen"
+			 x:DataType="vm:LoginScreenViewModel">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="50" />
+		</Grid.RowDefinitions>
+
+		<!-- Login Title -->
+		<TextBlock Grid.Row="0" Text="Авторизация" Classes="Header" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="20"/>
+
+		<!-- ID Client Input -->
+		<TextBox Grid.Row="1" Text="{Binding IdClient}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="40" Margin="20" Watermark="Введите ID клиента"/>
+
+		<!-- Password Input -->
+		<TextBox Grid.Row="2" Text="{Binding Password}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="40" Margin="20" Watermark="Введите пароль"/>
+
+		<!-- Captcha Input -->
+		<TextBox Grid.Row="3" Text="{Binding CapchaCheck}" Width="250" Height="40" Watermark="Введите капчу"/>
+
+		<!-- Captcha Image -->
+		<UserControl Grid.Row="4" Content="{Binding CaptchaImage}"/>
+
+		<!-- Login Button -->
+		<Button Grid.Row="5" Content="Войти" IsEnabled="{Binding IsEnableButton}" Classes="ButtonTemplate" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="40" Margin="20" Command="{Binding LoginCommand}" />
+
+		<!-- Error Message -->
+		<TextBlock Grid.Row="6" Text="{Binding ErrorMessage}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="40" Margin="20" Foreground="Red"/>
+	</Grid>
+</UserControl>

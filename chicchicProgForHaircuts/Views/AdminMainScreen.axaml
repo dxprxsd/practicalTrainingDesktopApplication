@@ -1,0 +1,40 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:chicchicProgForHaircuts.ViewModels"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="chicchicProgForHaircuts.Views.AdminMainScreen"
+             x:DataType="vm:AdminMainScreenViewModel">
+
+	<StackPanel>
+		<TextBlock Text="Записи на стрижки" Classes="Header" FontSize="20" HorizontalAlignment="Center" Margin="10"/>
+
+		<!-- ListBox to display appointments -->
+		<ListBox ItemsSource="{Binding Appointments}" Margin="10">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal" Spacing="10">
+						<!-- ID -->
+						<TextBlock Text="{Binding Id}" Width="50" VerticalAlignment="Center"/>
+
+						<!-- Client Name -->
+						<TextBlock Text="{Binding Client.NameClient}" Width="200" VerticalAlignment="Center"/>
+
+						<!-- Employee Name -->
+						<TextBlock Text="{Binding Employee.NameEmployee}" Width="200" VerticalAlignment="Center"/>
+
+						<!-- Haircut Name -->
+						<TextBlock Text="{Binding Haircut.Name}" Width="200" VerticalAlignment="Center"/>
+
+						<!-- Appointment Date -->
+						<TextBlock Text="{Binding AppointmentDate}" Width="150" VerticalAlignment="Center"/>
+
+						<!-- Final Price -->
+						<TextBlock Text="{Binding FinalPrice}" Width="100" VerticalAlignment="Center"/>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+	</StackPanel>
+</UserControl>

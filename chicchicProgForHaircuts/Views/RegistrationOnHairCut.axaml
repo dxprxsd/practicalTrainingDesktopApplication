@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:chicchicProgForHaircuts.ViewModels"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="chicchicProgForHaircuts.Views.RegistrationOnHairCut"
+             x:DataType="vm:RegistrationOnHairCutViewModel">
+
+	<StackPanel Margin="20">
+		<!-- Title -->
+		<TextBlock Text="Запись на стрижку" FontSize="24" HorizontalAlignment="Center" Margin="10"/>
+
+		<!-- Employee Selection -->
+		<TextBlock Text="Выберите парикмахера:" FontSize="16" Margin="5"/>
+		<ComboBox ItemsSource="{Binding Employees}"
+                  SelectedItem="{Binding SelectedEmployee}"
+                  Margin="5">
+			<ComboBox.ItemTemplate>
+				<DataTemplate>
+					<TextBlock Text="{Binding NameEmployee}" />
+				</DataTemplate>
+			</ComboBox.ItemTemplate>
+		</ComboBox>
+
+		<!-- Haircut Selection -->
+		<TextBlock Text="Выберите стрижку:" FontSize="16" Margin="5"/>
+		<ComboBox ItemsSource="{Binding Haircuts}"
+                  SelectedItem="{Binding SelectedHaircut}"
+                  Margin="5">
+			<ComboBox.ItemTemplate>
+				<DataTemplate>
+					<TextBlock Text="{Binding Name}" />
+				</DataTemplate>
+			</ComboBox.ItemTemplate>
+		</ComboBox>
+
+		<!-- Appointment Date -->
+		<TextBlock Text="Выберите дату записи:" FontSize="16" Margin="5"/>
+		<DatePicker SelectedDate="{Binding AppointmentDate}" Margin="5"/>
+
+		<!-- Final Price -->
+		<TextBlock Text="Введите цену:" FontSize="16" Margin="5"/>
+		<TextBox Text="{Binding FinalPrice}" Margin="5"/>
+
+		<!-- Book Appointment Button -->
+		<Button Content="Записаться" Command="{Binding BookAppointmentCommand}" HorizontalAlignment="Center" Margin="10"/>
+	</StackPanel>
+</UserControl>
