@@ -36,6 +36,6 @@
 		<Button Grid.Row="5" Content="Войти" IsEnabled="{Binding IsEnableButton}" Classes="ButtonTemplate" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="40" Margin="20" Command="{Binding LoginCommand}" />
 
 		<!-- Error Message -->
-		<TextBlock Grid.Row="6" Text="{Binding ErrorMessage}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="40" Margin="20" Foreground="Red"/>
+		<TextBlock Grid.Row="6" Text="{Binding ErrorMessage}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Height="80" Margin="20" Foreground="Red"/>
 	</Grid>
 </UserControl>

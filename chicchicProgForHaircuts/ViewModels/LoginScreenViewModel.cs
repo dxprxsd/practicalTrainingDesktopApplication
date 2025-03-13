@@ -14,7 +14,7 @@ namespace chicchicProgForHaircuts.ViewModels
 {
 	public class LoginScreenViewModel : ViewModelBase
 	{
-        private readonly GoodhaircutContext _db;
+        private GoodhaircutContext _db;
         private string _idClient;
         private string _password;
         private string _errorMessage;
@@ -23,6 +23,7 @@ namespace chicchicProgForHaircuts.ViewModels
         string capchaCheck;
         int counter = 3;
         bool isEnableButton = true;
+        Client client;
 
         public Canvas CaptchaImage { get => captchaImage; set => this.RaiseAndSetIfChanged(ref captchaImage, value); }
         public string CaptchaText { get => сaptchaText; set => this.RaiseAndSetIfChanged(ref сaptchaText, value); }
@@ -70,18 +71,14 @@ namespace chicchicProgForHaircuts.ViewModels
         /// </summary>
         /// <param name="db">Контекст базы данных.</param>
         /// <param name="mainWindowViewModel">ViewModel главного окна.</param>
-        public LoginScreenViewModel(GoodhaircutContext db, MainWindowViewModel mainWindowViewModel)
+        /// , MainWindowViewModel mainWindowViewModel
+        public LoginScreenViewModel(GoodhaircutContext db) 
         {
             _db = db;
-            _mainWindowViewModel = mainWindowViewModel ?? throw new ArgumentNullException(nameof(mainWindowViewModel));  // Проверка на null
+            //_mainWindowViewModel = mainWindowViewModel ?? throw new ArgumentNullException(nameof(mainWindowViewModel));  // Проверка на null
             LoginCommand = ReactiveCommand.Create(Authenticate);
             GenerateCaptcha();
         }
-
-        /// <summary>
-        /// Переход на основной экран приложения.
-        /// </summary>
-        //public void GoToMainScreen() => _mainWindowViewModel.Us = new MainScreen();
 
         /// <summary>
         /// Метод для аутентификации пользователя.
@@ -120,7 +117,7 @@ namespace chicchicProgForHaircuts.ViewModels
                 }
 
                 // Check for client in Clients table
-                var client = _db.Clients.FirstOrDefault(u => u.Id == userId && u.Password == Password);
+                client = _db.Clients.FirstOrDefault(u => u.Id == userId && u.Password == Password);
                 // Check for employee in Employee table
                 var employee = _db.Employees.FirstOrDefault(u => u.Id == userId && u.Password == Password);
 
@@ -170,28 +167,14 @@ namespace chicchicProgForHaircuts.ViewModels
 
 
         /// <summary>
-        /// Переход на экран модератора.
+        /// Переход на главный экран.
         /// </summary>
-        /// <param name="moderator">Модератор.</param>
-        private void GoToMainScreen()
-        {
-            // Создаем новый ViewModel для экрана модератора
-            var mainScreenViewModel = new MainWindowViewModel(_db);
-            // Переходим на экран модератора
-            _mainWindowViewModel.Us = new MainScreen { DataContext = mainScreenViewModel };
-        }
+        public void GoToMainScreen() => MainWindowViewModel.Self.Us = new MainScreen();
 
         /// <summary>
         /// Переход на экран администратора.
         /// </summary>
-        private void GoToAdminMainScreen()
-        {
-            // Создаем новый ViewModel для экрана администратора
-            var adminMainScreenViewModel = new AdminMainScreenViewModel(_db);
-            // Переходим на экран администратора
-            _mainWindowViewModel.Us = new AdminMainScreen { DataContext = adminMainScreenViewModel };
-        }
-
+        public void GoToAdminMainScreen() => MainWindowViewModel.Self.Us = new AdminMainScreen();
 
         /// <summary>
         /// Метод для генерации капчи.

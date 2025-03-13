@@ -9,18 +9,16 @@
 
 	<StackPanel Margin="20">
 		<!-- Title -->
-		<TextBlock Text="Запись на стрижку" FontSize="24" HorizontalAlignment="Center" Margin="10"/>
-
+		<Button Command="{Binding ExitToMainScreen}" Classes="ButtonInTemplate" Content="Назад" Width="80" />
+		
+		<TextBlock Text="Запись на стрижку" Classes="Header"  FontSize="24" HorizontalAlignment="Center" Margin="10"/>
+		
 		<!-- Employee Selection -->
 		<TextBlock Text="Выберите парикмахера:" FontSize="16" Margin="5"/>
-		<ComboBox ItemsSource="{Binding Employees}"
+		<ComboBox ItemsSource="{Binding Employeis}"
                   SelectedItem="{Binding SelectedEmployee}"
+				  DisplayMemberBinding="{Binding NameEmployee}" 
                   Margin="5">
-			<ComboBox.ItemTemplate>
-				<DataTemplate>
-					<TextBlock Text="{Binding NameEmployee}" />
-				</DataTemplate>
-			</ComboBox.ItemTemplate>
 		</ComboBox>
 
 		<!-- Haircut Selection -->
@@ -40,10 +38,11 @@
 		<DatePicker SelectedDate="{Binding AppointmentDate}" Margin="5"/>
 
 		<!-- Final Price -->
+		
 		<TextBlock Text="Введите цену:" FontSize="16" Margin="5"/>
-		<TextBox Text="{Binding FinalPrice}" Margin="5"/>
+		<MaskedTextBox Mask="000.00" Text="{Binding FinalPrice}" Margin="5" />
 
 		<!-- Book Appointment Button -->
-		<Button Content="Записаться" Command="{Binding BookAppointmentCommand}" HorizontalAlignment="Center" Margin="10"/>
+		<Button Content="Записаться" Command="{Binding BookAppointmentCommand}" Classes="ButtonTemplate" Width="120" HorizontalAlignment="Center" Margin="10"/>
 	</StackPanel>
 </UserControl>

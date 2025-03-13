@@ -19,6 +19,8 @@ public partial class GoodhaircutContext : DbContext
 
     public virtual DbSet<Client> Clients { get; set; }
 
+    public virtual DbSet<Clientstatus> Clientstatuses { get; set; }
+
     public virtual DbSet<Employee> Employees { get; set; }
 
     public virtual DbSet<Gender> Genders { get; set; }
@@ -47,9 +49,7 @@ public partial class GoodhaircutContext : DbContext
                 .HasColumnName("appointment_date");
             entity.Property(e => e.ClientId).HasColumnName("client_id");
             entity.Property(e => e.EmployeeId).HasColumnName("employee_id");
-            entity.Property(e => e.FinalPrice)
-                .HasPrecision(10, 2)
-                .HasColumnName("final_price");
+            entity.Property(e => e.FinalPrice).HasColumnName("final_price");
             entity.Property(e => e.HaircutId).HasColumnName("haircut_id");
 
             entity.HasOne(d => d.Client).WithMany(p => p.Appointments)
@@ -88,10 +88,7 @@ public partial class GoodhaircutContext : DbContext
             entity.Property(e => e.PhoneNumber)
                 .HasMaxLength(20)
                 .HasColumnName("phone_number");
-            entity.Property(e => e.Status)
-                .HasMaxLength(20)
-                .HasComputedColumnSql("\nCASE\n    WHEN (visit_count >= 5) THEN 'постоянный'::text\n    ELSE 'обычный'::text\nEND", true)
-                .HasColumnName("status");
+            entity.Property(e => e.StatusId).HasColumnName("status_id");
             entity.Property(e => e.SurnameClient)
                 .HasMaxLength(50)
                 .HasColumnName("surname_client");
@@ -102,6 +99,22 @@ public partial class GoodhaircutContext : DbContext
             entity.HasOne(d => d.GenderNavigation).WithMany(p => p.Clients)
                 .HasForeignKey(d => d.Gender)
                 .HasConstraintName("clients_gender_fkey");
+
+            entity.HasOne(d => d.Status).WithMany(p => p.Clients)
+                .HasForeignKey(d => d.StatusId)
+                .HasConstraintName("clients_status_id_fkey");
+        });
+
+        modelBuilder.Entity<Clientstatus>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("clientstatus_pkey");
+
+            entity.ToTable("clientstatus");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.StatusName)
+                .HasMaxLength(50)
+                .HasColumnName("status_name");
         });
 
         modelBuilder.Entity<Employee>(entity =>
@@ -162,9 +175,7 @@ public partial class GoodhaircutContext : DbContext
                 .HasMaxLength(100)
                 .HasColumnName("name");
             entity.Property(e => e.Photo).HasColumnName("photo");
-            entity.Property(e => e.Price)
-                .HasPrecision(10, 2)
-                .HasColumnName("price");
+            entity.Property(e => e.Price).HasColumnName("price");
 
             entity.HasOne(d => d.GenderNavigation).WithMany(p => p.Haircuts)
                 .HasForeignKey(d => d.Gender)

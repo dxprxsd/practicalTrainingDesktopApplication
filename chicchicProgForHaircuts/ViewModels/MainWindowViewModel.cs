@@ -16,6 +16,7 @@ namespace chicchicProgForHaircuts.ViewModels
         private readonly GoodhaircutContext _db;
         private UserControl _us;
         public static MainWindowViewModel Self;
+        int idClient;
 
         private Haircut _haircut;
         private ObservableCollection<Haircut> _haircuts;
@@ -59,21 +60,35 @@ namespace chicchicProgForHaircuts.ViewModels
         {
             _db = db;
             Self = this;
-            //Us = new LoginScreen();
-            Us = new MainScreen();
-            //Us = new AdminMainScreen();
-            //Us = new RegistrationOnHairCut();
-
+            Us = new LoginScreen() { DataContext = new LoginScreenViewModel(_db) };
             // Загружаем стрижки и подгружаем данные о поле (GenderNavigation)
             Haircuts = new ObservableCollection<Haircut>(
                 _db.Haircuts.Include(x => x.GenderNavigation).ToList()
             );
         }
 
+//        public MainWindowViewModel(GoodhaircutContext db, int idClient)
+//        {
+
+//            this.idClient = idClient;
+//            Self = this;
+//            Us = new MainScreen() { DataContext = new MainWindowViewModel(_db) };
+//            //Us = new MainScreen();
+//            //Us = new AdminMainScreen();
+//            //Us = new RegistrationOnHairCut();
+//            _db = db;
+//            Haircuts = new ObservableCollection<Haircut>(
+//    db.Haircuts.Include(x => x.GenderNavigation).ToList()
+//);
+
+//        }
+
         /// <summary>
         /// Переход на основной экран приложения.
         /// </summary>
-        public void GoToRegOnHairCut() => Us = new RegistrationOnHairCut();
+        public void GoToRegOnHairCut() => Us = new RegistrationOnHairCut() { DataContext = new RegistrationOnHairCutViewModel(_db) };
+
+        public void GoToLogin() => Us = new LoginScreen() { DataContext = new LoginScreenViewModel(_db) };
 
         /// <summary>
         /// Загружает стрижки из базы данных.

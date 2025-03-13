@@ -100,3 +100,4 @@ C:\Users\admin\source\repos\chicchicProgForHaircuts\chicchicProgForHaircuts\bin\
 C:\Users\admin\source\repos\chicchicProgForHaircuts\chicchicProgForHaircuts\bin\Debug\net8.0\Materials\photo8.jpg
 C:\Users\admin\source\repos\chicchicProgForHaircuts\chicchicProgForHaircuts\bin\Debug\net8.0\Materials\photo9.jpg
 C:\Users\admin\source\repos\chicchicProgForHaircuts\chicchicProgForHaircuts\bin\Debug\net8.0\Materials\photozaglushka.jpg
+C:\Users\admin\source\repos\chicchicProgForHaircuts\chicchicProgForHaircuts\obj\Debug\net8.0\chicchicProgForHaircuts.sourcelink.json

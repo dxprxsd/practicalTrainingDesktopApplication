@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("chicchicProgForHaircuts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+652a9e60fd255c71ad620001d852cb5c357c1157")]
 [assembly: System.Reflection.AssemblyProductAttribute("chicchicProgForHaircuts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("chicchicProgForHaircuts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

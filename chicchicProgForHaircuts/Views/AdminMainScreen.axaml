@@ -7,34 +7,83 @@
              x:Class="chicchicProgForHaircuts.Views.AdminMainScreen"
              x:DataType="vm:AdminMainScreenViewModel">
 
-	<StackPanel>
-		<TextBlock Text="Записи на стрижки" Classes="Header" FontSize="20" HorizontalAlignment="Center" Margin="10"/>
+	
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="490" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="50" />
+		</Grid.RowDefinitions>
 
-		<!-- ListBox to display appointments -->
-		<ListBox ItemsSource="{Binding Appointments}" Margin="10">
-			<ListBox.ItemTemplate>
-				<DataTemplate>
-					<StackPanel Orientation="Horizontal" Spacing="10">
-						<!-- ID -->
-						<TextBlock Text="{Binding Id}" Width="50" VerticalAlignment="Center"/>
+		<Button Content="Выйти" Width="80"  Classes="ButtonInTemplate" Command="{Binding GoToLoginScreen}" Margin="5"/>
+		<TextBlock Text="Страница администратора" Grid.ColumnSpan="2" Grid.Row="0" Classes="Header" FontSize="20" HorizontalAlignment="Center" Margin="10"/>
+		
+		<StackPanel Grid.Column="0" Grid.Row="1">
+			<TextBlock Text="Записи на стрижки" Classes="Header" FontSize="20" HorizontalAlignment="Center" Margin="10"/>
 
-						<!-- Client Name -->
-						<TextBlock Text="{Binding Client.NameClient}" Width="200" VerticalAlignment="Center"/>
+			<!-- ListBox to display appointments -->
+			<ListBox ItemsSource="{Binding Appointments}" Margin="10">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel Orientation="Horizontal" Spacing="10">
 
-						<!-- Employee Name -->
-						<TextBlock Text="{Binding Employee.NameEmployee}" Width="200" VerticalAlignment="Center"/>
+							<!-- Client Name -->
+							<TextBlock Text="{Binding Client.NameClient}" Width="100" VerticalAlignment="Center"/>
 
-						<!-- Haircut Name -->
-						<TextBlock Text="{Binding Haircut.Name}" Width="200" VerticalAlignment="Center"/>
+							<!-- Employee Name -->
+							<TextBlock Text="{Binding Employee.NameEmployee}" Width="100" VerticalAlignment="Center"/>
 
-						<!-- Appointment Date -->
-						<TextBlock Text="{Binding AppointmentDate}" Width="150" VerticalAlignment="Center"/>
+							<!-- Haircut Name -->
+							<TextBlock Text="{Binding Haircut.Name}" Width="160" VerticalAlignment="Center"/>
 
-						<!-- Final Price -->
-						<TextBlock Text="{Binding FinalPrice}" Width="100" VerticalAlignment="Center"/>
-					</StackPanel>
-				</DataTemplate>
-			</ListBox.ItemTemplate>
-		</ListBox>
-	</StackPanel>
+							<!-- Appointment Date -->
+							<TextBlock Text="{Binding AppointmentDate}" Width="150" VerticalAlignment="Center"/>
+
+							<!-- Final Price -->
+							<TextBlock Text="{Binding FinalPrice}" Width="120" VerticalAlignment="Center"/>
+						</StackPanel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</StackPanel>
+		
+		<StackPanel Grid.Column="1" Grid.Row="1">
+			<Button Content="Регистрация клиента" Command="{Binding GoToRegClientScreen}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Classes="ButtonTemplate" />
+
+			<TextBlock Text="Список клиентов" Classes="Header" FontSize="20" HorizontalAlignment="Center" Margin="10"/>
+
+			<!-- ListBox to display appointments -->
+			<ListBox ItemsSource="{Binding Clients}" Margin="10">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel Orientation="Horizontal" Spacing="10">
+							
+							<!-- Client Name -->
+							<TextBlock Text="{Binding NameClient}" Width="100" VerticalAlignment="Center"/>
+							
+							<!-- Client SurName -->
+							<TextBlock Text="{Binding SurnameClient}" Width="100" VerticalAlignment="Center"/>
+							
+							<!-- Client Patronymic -->
+							<TextBlock Text="{Binding PatronymicClient}" Width="100" VerticalAlignment="Center"/>
+
+							<!-- Client gender -->
+							<TextBlock Text="{Binding GenderNavigation.GenderName}" Width="200" VerticalAlignment="Center"/>
+
+							<!-- Haircut Name -->
+							<TextBlock Text="{Binding Status.StatusName}" Width="200" VerticalAlignment="Center"/>
+
+							<!-- Appointment Date -->
+							<TextBlock Text="{Binding VisitCount}" Width="150" VerticalAlignment="Center"/>
+						</StackPanel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+			
+		</StackPanel>
+	</Grid>
 </UserControl>

@@ -5,13 +5,15 @@ using System.Collections.ObjectModel;
 using chicchicProgForHaircuts.Models;
 using ReactiveUI;
 using Microsoft.EntityFrameworkCore;
+using chicchicProgForHaircuts.Views;
 
 namespace chicchicProgForHaircuts.ViewModels
 {
     public class AdminMainScreenViewModel : ViewModelBase
     {
-        private readonly GoodhaircutContext _db;
+        private GoodhaircutContext _db;
         private ObservableCollection<Appointment> _appointments;
+        private ObservableCollection<Client> _clients;
 
         /// <summary>
         /// Список записей на стрижки.
@@ -22,10 +24,20 @@ namespace chicchicProgForHaircuts.ViewModels
             set => this.RaiseAndSetIfChanged(ref _appointments, value);
         }
 
+        /// <summary>
+        /// Список клиентов.
+        /// </summary>
+        public ObservableCollection<Client> Clients
+        {
+            get => _clients;
+            set => this.RaiseAndSetIfChanged(ref _clients, value);
+        }
+
         public AdminMainScreenViewModel(GoodhaircutContext db)
         {
             _db = db;
             LoadAppointments();
+            LoadClients();
         }
 
         /// <summary>
@@ -41,6 +53,31 @@ namespace chicchicProgForHaircuts.ViewModels
 
             Appointments = new ObservableCollection<Appointment>(appointmentsFromDb);
         }
-    }
 
+        public void GoToLoginScreen() => MainWindowViewModel.Self.Us = new LoginScreen() { DataContext = new LoginScreenViewModel(_db) };
+
+        /// <summary>
+        /// Переход на основной экран приложения.
+        /// </summary>
+        public void GoToRegClientScreen()
+        {
+            var regClientViewModel = new ClientRegistrationScreenViewModel(_db);
+            MainWindowViewModel.Self.Us = new ClientRegistrationScreen() { DataContext = regClientViewModel };
+        }
+
+
+        /// <summary>
+        /// Загружает записи о клиентах из базы данных.
+        /// </summary>
+        private void LoadClients()
+        {
+            var clientsFromDb = _db.Clients
+                .Include(x => x.GenderNavigation) // Правильное навигационное свойство
+                .Include(x => x.Status)  // Загружаем статус клиента
+                .ToList();
+
+            Clients = new ObservableCollection<Client>(clientsFromDb);
+        }
+
+    }
 }

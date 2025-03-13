@@ -1,0 +1,40 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:vm="using:chicchicProgForHaircuts.ViewModels"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="chicchicProgForHaircuts.Views.ClientRegistrationScreen"
+			 x:DataType="vm:ClientRegistrationScreenViewModel">
+	
+  <Grid>
+	  <Grid.RowDefinitions>
+		  <RowDefinition Height="50" />
+		  <RowDefinition Height="*" />
+		  <RowDefinition Height="50" />
+	  </Grid.RowDefinitions>
+
+	  <Button Command="{Binding ExitToMainScreen}" Classes="ButtonInTemplate" Content="Назад" Margin="5" Width="80" />
+
+	  <TextBlock Grid.Row="0" Text="Регистрация клиента" Classes="Header" />
+
+	  <StackPanel Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+		  <TextBlock Text="Имя" />
+		  <TextBox Text="{Binding }" Width="200"/>
+		  <TextBlock Text="Фамилия" />
+		  <TextBox Text="{Binding }" Width="200"/>
+		  <TextBlock Text="Отчество" />
+		  <TextBox Text="{Binding }" Width="200"/>
+		  <TextBlock Text="Номер телефона" />
+		  <MaskedTextBox Margin="3" Text="{Binding }" Mask="7(000)000-00-00" Width="200" />
+		  <TextBlock Text="Пол" />
+		  <TextBox  Width="200"/>
+		  <TextBlock Text="Пароль" />
+		  <TextBox Text="{Binding }" Width="200"/>
+		  
+		  <Button Classes="ButtonTemplate" Content="Готово" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
+		  <!-- Error Message -->
+		  <TextBlock Grid.Row="6" Grid.ColumnSpan="2" Text="{Binding }" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="40" Margin="20" Foreground="Red"/>
+	  </StackPanel>
+  </Grid>
+</UserControl>

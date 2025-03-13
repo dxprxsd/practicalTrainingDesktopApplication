@@ -9,9 +9,9 @@ public partial class Haircut
 
     public string Name { get; set; } = null!;
 
-    public int Gender { get; set; }
+    public int? Gender { get; set; }
 
-    public decimal Price { get; set; }
+    public double Price { get; set; }
 
     public string? Photo { get; set; }
 

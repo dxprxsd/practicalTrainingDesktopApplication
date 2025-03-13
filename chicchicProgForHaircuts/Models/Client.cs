@@ -19,11 +19,13 @@ public partial class Client
 
     public int? VisitCount { get; set; }
 
-    public string? Status { get; set; }
+    public int? StatusId { get; set; }
 
     public string Password { get; set; } = null!;
 
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
     public virtual Gender? GenderNavigation { get; set; }
+
+    public virtual Clientstatus? Status { get; set; }
 }
