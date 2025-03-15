@@ -15,7 +15,7 @@ public partial class Appointment
 
     public DateTime AppointmentDate { get; set; }
 
-    public double FinalPrice { get; set; }
+    public double? FinalPrice { get; set; }
 
     public virtual Client? Client { get; set; }
 

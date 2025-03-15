@@ -15,75 +15,101 @@
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="50" />
-			<RowDefinition Height="*" />
 			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="20" />
 		</Grid.RowDefinitions>
 
-		<Button Content="Выйти" Width="80"  Classes="ButtonInTemplate" Command="{Binding GoToLoginScreen}" Margin="5"/>
+		<Border Width="0" HorizontalAlignment="Left" BorderBrush="Green" BorderThickness="1" Margin="10">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+			</Border.Effect>
+			<StackPanel Orientation="Vertical">
+				<Button Content="Выйти" Width="80"  Classes="ButtonInTemplate" Command="{Binding GoToLoginScreen}" />
+			</StackPanel>
+		</Border>
+		
 		<TextBlock Text="Страница администратора" Grid.ColumnSpan="2" Grid.Row="0" Classes="Header" FontSize="20" HorizontalAlignment="Center" Margin="10"/>
 		
 		<StackPanel Grid.Column="0" Grid.Row="1">
 			<TextBlock Text="Записи на стрижки" Classes="Header" FontSize="20" HorizontalAlignment="Center" Margin="10"/>
 
-			<!-- ListBox to display appointments -->
-			<ListBox ItemsSource="{Binding Appointments}" Margin="10">
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<StackPanel Orientation="Horizontal" Spacing="10">
-
-							<!-- Client Name -->
-							<TextBlock Text="{Binding Client.NameClient}" Width="100" VerticalAlignment="Center"/>
-
-							<!-- Employee Name -->
-							<TextBlock Text="{Binding Employee.NameEmployee}" Width="100" VerticalAlignment="Center"/>
-
-							<!-- Haircut Name -->
-							<TextBlock Text="{Binding Haircut.Name}" Width="160" VerticalAlignment="Center"/>
-
-							<!-- Appointment Date -->
-							<TextBlock Text="{Binding AppointmentDate}" Width="150" VerticalAlignment="Center"/>
-
-							<!-- Final Price -->
-							<TextBlock Text="{Binding FinalPrice}" Width="120" VerticalAlignment="Center"/>
-						</StackPanel>
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
+			<Border Width="0" BorderBrush="Green" BorderThickness="1" Margin="10">
+				<Border.Effect>
+					<DropShadowEffect Color="Green" BlurRadius="15" Opacity="0.5"/>
+				</Border.Effect>
+				<StackPanel Orientation="Vertical">
+					<Button Content="Печать" Width="80"  Classes="ButtonTemplate" Command="{Binding PrintAppointmentsCommand}" HorizontalAlignment="Center" Margin="5"/>
+				</StackPanel>
+			</Border>
 		</StackPanel>
+		<!-- ListBox to display appointments -->
+		<ListBox Grid.Row="3" ItemsSource="{Binding Appointments}" Margin="10">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal" Spacing="10">
+
+						<!-- Client Name -->
+						<TextBlock Text="{Binding Client.NameClient}" Width="100" VerticalAlignment="Center"/>
+
+						<!-- Employee Name -->
+						<TextBlock Text="{Binding Employee.NameEmployee}" Width="100" VerticalAlignment="Center"/>
+
+						<!-- Haircut Name -->
+						<TextBlock Text="{Binding Haircut.Name}" Width="160" VerticalAlignment="Center"/>
+
+						<!-- Appointment Date -->
+						<TextBlock Text="{Binding AppointmentDate}" Width="150" VerticalAlignment="Center"/>
+
+						<!-- Final Price -->
+						<TextBlock Text="{Binding FinalPrice}" Width="120" VerticalAlignment="Center"/>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
 		
 		<StackPanel Grid.Column="1" Grid.Row="1">
-			<Button Content="Регистрация клиента" Command="{Binding GoToRegClientScreen}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Classes="ButtonTemplate" />
-
 			<TextBlock Text="Список клиентов" Classes="Header" FontSize="20" HorizontalAlignment="Center" Margin="10"/>
 
-			<!-- ListBox to display appointments -->
-			<ListBox ItemsSource="{Binding Clients}" Margin="10">
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<StackPanel Orientation="Horizontal" Spacing="10">
-							
-							<!-- Client Name -->
-							<TextBlock Text="{Binding NameClient}" Width="100" VerticalAlignment="Center"/>
-							
-							<!-- Client SurName -->
-							<TextBlock Text="{Binding SurnameClient}" Width="100" VerticalAlignment="Center"/>
-							
-							<!-- Client Patronymic -->
-							<TextBlock Text="{Binding PatronymicClient}" Width="100" VerticalAlignment="Center"/>
-
-							<!-- Client gender -->
-							<TextBlock Text="{Binding GenderNavigation.GenderName}" Width="200" VerticalAlignment="Center"/>
-
-							<!-- Haircut Name -->
-							<TextBlock Text="{Binding Status.StatusName}" Width="200" VerticalAlignment="Center"/>
-
-							<!-- Appointment Date -->
-							<TextBlock Text="{Binding VisitCount}" Width="150" VerticalAlignment="Center"/>
-						</StackPanel>
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
+			<Border Width="0" BorderBrush="Green" BorderThickness="1" Margin="10">
+				<Border.Effect>
+					<DropShadowEffect Color="Green" BlurRadius="15" Opacity="0.5"/>
+				</Border.Effect>
+				<StackPanel Orientation="Vertical">
+					<Button Content="Регистрация клиента" Command="{Binding GoToRegClientScreen}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Classes="ButtonTemplate" />
+				</StackPanel>
+			</Border>
 			
 		</StackPanel>
+		<!-- ListBox to display appointments -->
+		<ListBox Grid.Row="3" Grid.Column="2" ItemsSource="{Binding Clients}" Margin="10">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal" Spacing="10">
+
+						<!-- Client Name -->
+						<TextBlock Text="{Binding NameClient}" Width="100" VerticalAlignment="Center"/>
+
+						<!-- Client SurName -->
+						<TextBlock Text="{Binding SurnameClient}" Width="100" VerticalAlignment="Center"/>
+
+						<!-- Client Patronymic -->
+						<TextBlock Text="{Binding PatronymicClient}" Width="100" VerticalAlignment="Center"/>
+
+						<!-- Client gender -->
+						<TextBlock Text="{Binding GenderNavigation.GenderName}" Width="200" VerticalAlignment="Center"/>
+
+						<!-- Haircut Name -->
+						<TextBlock Text="{Binding Status.StatusName}" Width="200" VerticalAlignment="Center"/>
+
+						<!-- Appointment Date -->
+						<TextBlock Text="{Binding VisitCount}" Width="150" VerticalAlignment="Center"/>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+		<!-- Error Message -->
+		<TextBlock Grid.Row="5" Text="{Binding ErrorMessage}" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="80" Margin="20" Foreground="Red"/>
 	</Grid>
 </UserControl>

@@ -125,6 +125,7 @@ namespace chicchicProgForHaircuts.ViewModels
                 {
                     // Client found, navigate to MainScreen
                     ErrorMessage = "Успешный вход как клиент!";
+                    MainWindowViewModel.Self.IdClient = client.Id;
                     GoToMainScreen();
                 }
                 else if (employee != null)

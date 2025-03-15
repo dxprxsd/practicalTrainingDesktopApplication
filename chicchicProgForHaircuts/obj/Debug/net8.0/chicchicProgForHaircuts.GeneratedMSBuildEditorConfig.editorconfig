@@ -39,3 +39,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/admin/source/repos/chicchicProgForHaircuts/chicchicProgForHaircuts/Views/RegistrationOnHairCut.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/admin/source/repos/chicchicProgForHaircuts/chicchicProgForHaircuts/Views/UserProfileScreen.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

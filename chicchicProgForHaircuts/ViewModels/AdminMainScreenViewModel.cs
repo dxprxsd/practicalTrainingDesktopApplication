@@ -6,6 +6,9 @@ using chicchicProgForHaircuts.Models;
 using ReactiveUI;
 using Microsoft.EntityFrameworkCore;
 using chicchicProgForHaircuts.Views;
+using System.IO;
+using System.Reactive;
+using System.Diagnostics.Metrics;
 
 namespace chicchicProgForHaircuts.ViewModels
 {
@@ -14,6 +17,7 @@ namespace chicchicProgForHaircuts.ViewModels
         private GoodhaircutContext _db;
         private ObservableCollection<Appointment> _appointments;
         private ObservableCollection<Client> _clients;
+        private string _errorMessage;
 
         /// <summary>
         /// Список записей на стрижки.
@@ -33,11 +37,24 @@ namespace chicchicProgForHaircuts.ViewModels
             set => this.RaiseAndSetIfChanged(ref _clients, value);
         }
 
+        /// <summary>
+        /// Сообщение об сохранении данных для отчета.
+        /// </summary>
+        public string ErrorMessage
+        {
+            get => _errorMessage;
+            set => this.RaiseAndSetIfChanged(ref _errorMessage, value);
+        }
+
+        // Команда для печати записей
+        public ReactiveCommand<Unit, Unit> PrintAppointmentsCommand { get; }
+
         public AdminMainScreenViewModel(GoodhaircutContext db)
         {
             _db = db;
             LoadAppointments();
             LoadClients();
+            PrintAppointmentsCommand = ReactiveCommand.Create(PrintAppointments);
         }
 
         /// <summary>
@@ -79,5 +96,43 @@ namespace chicchicProgForHaircuts.ViewModels
             Clients = new ObservableCollection<Client>(clientsFromDb);
         }
 
+
+        /// <summary>
+        /// Метод для выведения отчета для печати
+        /// </summary>
+        private void PrintAppointments()
+        {
+            // Путь к файлу, в который будут записаны данные
+            string filePath = "appointments.txt";
+
+            // Подсчитываем популярность каждой стрижки
+            var popularHaircut = Appointments
+                .GroupBy(a => a.Haircut.Name)
+                .OrderByDescending(g => g.Count()) // Сортируем по количеству записей
+                .FirstOrDefault(); // Берем самую популярную
+
+            string popularHaircutName = popularHaircut?.Key ?? "Неизвестно"; // Если нет популярных стрижек, выводим "Неизвестно"
+            int popularHaircutCount = popularHaircut?.Count() ?? 0;
+
+            // Открываем StreamWriter для записи в файл
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                writer.WriteLine("Client Name | Employee Name | Haircut Name | Appointment Date | Final Price");
+
+                foreach (var appointment in Appointments)
+                {
+                    writer.WriteLine($"{appointment.Client.NameClient} | {appointment.Employee.NameEmployee} | {appointment.Haircut.Name} | {appointment.AppointmentDate} | {appointment.FinalPrice}");
+                }
+
+                // Печатаем самую популярную прическу
+                writer.WriteLine();
+                writer.WriteLine($"Самая популярная прическа: {popularHaircutName}");
+                writer.WriteLine($"Количество заказов: {popularHaircutCount}");
+            }
+
+            // Вы можете добавить уведомление пользователю, что файл был создан
+            Console.WriteLine("Data has been written to appointments.txt");
+            ErrorMessage = $"Отчет собран в файл {filePath}";
+        }
     }
 }

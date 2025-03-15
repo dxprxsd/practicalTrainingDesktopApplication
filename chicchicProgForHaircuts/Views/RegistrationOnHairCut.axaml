@@ -7,42 +7,110 @@
              x:Class="chicchicProgForHaircuts.Views.RegistrationOnHairCut"
              x:DataType="vm:RegistrationOnHairCutViewModel">
 
-	<StackPanel Margin="20">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="50" />
+		</Grid.RowDefinitions>
+
 		<!-- Title -->
-		<Button Command="{Binding ExitToMainScreen}" Classes="ButtonInTemplate" Content="Назад" Width="80" />
+		<Border Grid.Row="0" Width="0" HorizontalAlignment="Left" BorderBrush="Green" BorderThickness="1" Margin="5">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+			</Border.Effect>
+			<StackPanel Grid.Row="6" Orientation="Vertical">
+				<Button Grid.Row="0" Margin="10" Command="{Binding ExitToMainScreen}" Classes="ButtonInTemplate" Content="Назад" Width="80" />
+			</StackPanel>
+		</Border>
 		
-		<TextBlock Text="Запись на стрижку" Classes="Header"  FontSize="24" HorizontalAlignment="Center" Margin="10"/>
-		
-		<!-- Employee Selection -->
-		<TextBlock Text="Выберите парикмахера:" FontSize="16" Margin="5"/>
-		<ComboBox ItemsSource="{Binding Employeis}"
-                  SelectedItem="{Binding SelectedEmployee}"
-				  DisplayMemberBinding="{Binding NameEmployee}" 
-                  Margin="5">
-		</ComboBox>
 
-		<!-- Haircut Selection -->
-		<TextBlock Text="Выберите стрижку:" FontSize="16" Margin="5"/>
-		<ComboBox ItemsSource="{Binding Haircuts}"
-                  SelectedItem="{Binding SelectedHaircut}"
-                  Margin="5">
-			<ComboBox.ItemTemplate>
-				<DataTemplate>
-					<TextBlock Text="{Binding Name}" />
-				</DataTemplate>
-			</ComboBox.ItemTemplate>
-		</ComboBox>
+		<TextBlock Grid.Row="0" Text="Запись на стрижку" Classes="Header"  FontSize="24" HorizontalAlignment="Center" Margin="10"/>
 
-		<!-- Appointment Date -->
-		<TextBlock Text="Выберите дату записи:" FontSize="16" Margin="5"/>
-		<DatePicker SelectedDate="{Binding AppointmentDate}" Margin="5"/>
+		<StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+			
+			<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
+				<TextBlock Text="Выберите парикмахера:" HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Center" />
+				<Border Width="0" BorderBrush="Green" BorderThickness="1" HorizontalAlignment="Center">
+					<Border.Effect>
+						<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+					</Border.Effect>
+					<StackPanel Orientation="Vertical">
+						<ComboBox Background="White" ItemsSource="{Binding Employeis}" HorizontalAlignment="Center" VerticalAlignment="Center" SelectedItem="{Binding SelectedEmployee}" DisplayMemberBinding="{Binding NameEmployee}" Width="200" />
+					</StackPanel>
+				</Border>
 
-		<!-- Final Price -->
-		
-		<TextBlock Text="Введите цену:" FontSize="16" Margin="5"/>
-		<MaskedTextBox Mask="000.00" Text="{Binding FinalPrice}" Margin="5" />
+			</StackPanel>
+			<!-- Employee Selection -->
+			
 
-		<!-- Book Appointment Button -->
-		<Button Content="Записаться" Command="{Binding BookAppointmentCommand}" Classes="ButtonTemplate" Width="120" HorizontalAlignment="Center" Margin="10"/>
-	</StackPanel>
+			<!-- Haircut Selection -->
+			<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
+				<TextBlock  VerticalAlignment="Center"  Text="Выберите стрижку:" FontSize="18"/>
+				<Border Width="0" BorderBrush="Green" BorderThickness="1" HorizontalAlignment="Center">
+					<Border.Effect>
+						<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+					</Border.Effect>
+					<StackPanel Orientation="Vertical">
+						<ComboBox ItemsSource="{Binding Haircuts}"
+					  SelectedItem="{Binding SelectedHaircut}"
+					  Width="200" Background="White"  HorizontalAlignment="Center" VerticalAlignment="Center">
+							<ComboBox.ItemTemplate>
+								<DataTemplate>
+									<TextBlock Text="{Binding Name}" />
+								</DataTemplate>
+							</ComboBox.ItemTemplate>
+						</ComboBox>
+					</StackPanel>
+				</Border>
+				
+				
+			</StackPanel>
+			
+
+			<!-- Appointment Date -->
+			<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
+				<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Выберите дату записи:" FontSize="18"/>
+
+				<Border Width="0" BorderBrush="Green" BorderThickness="1" HorizontalAlignment="Center">
+					<Border.Effect>
+						<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+					</Border.Effect>
+					<StackPanel Orientation="Vertical">
+						<DatePicker Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" SelectedDate="{Binding AppointmentDate}" Margin="5" Width="300"/>
+					</StackPanel>
+				</Border>
+			</StackPanel>
+			
+
+			
+
+			<!-- Final Price -->
+
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="5">
+				<TextBlock Text="Цена:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" />
+				<Border Width="0" BorderBrush="Green" BorderThickness="1" >
+					<Border.Effect>
+						<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+					</Border.Effect>
+					<StackPanel HorizontalAlignment="Center" >
+						<TextBox Background="White" HorizontalAlignment="Center" IsReadOnly="True"  Text="{Binding FinalPrice}" Width="80" />
+					</StackPanel>
+				</Border>				
+			</StackPanel>
+
+			<!-- Book Appointment Button -->
+
+			<Border Width="0" HorizontalAlignment="Center" BorderBrush="Green" BorderThickness="1" Margin="10" >
+				<Border.Effect>
+					<DropShadowEffect Color="Green" BlurRadius="15" Opacity="0.5"/>
+				</Border.Effect>
+				<StackPanel HorizontalAlignment="Center" Orientation="Vertical">
+					<Button Content="Записаться" HorizontalAlignment="Center" Command="{Binding BookAppointmentCommand}" Classes="ButtonTemplate" Width="120"/>
+				</StackPanel>
+			</Border>
+			
+		</StackPanel>
+	</Grid>
 </UserControl>

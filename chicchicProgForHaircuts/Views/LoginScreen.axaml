@@ -13,29 +13,61 @@
 			<RowDefinition Height="50" />
 			<RowDefinition Height="50" />
 			<RowDefinition Height="50" />
-			<RowDefinition Height="*" />
 			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="80" />
 		</Grid.RowDefinitions>
 
 		<!-- Login Title -->
 		<TextBlock Grid.Row="0" Text="Авторизация" Classes="Header" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="20"/>
 
 		<!-- ID Client Input -->
-		<TextBox Grid.Row="1" Text="{Binding IdClient}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="40" Margin="20" Watermark="Введите ID клиента"/>
+		<Border Grid.Row="1" Width="0" BorderBrush="Green" BorderThickness="1" Margin="10">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+			</Border.Effect>
+			<StackPanel Grid.Row="1" Orientation="Vertical">
+				<TextBox  Text="{Binding IdClient}" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="40" Watermark="Введите ID клиента"/>
+			</StackPanel>
+		</Border>
 
 		<!-- Password Input -->
-		<TextBox Grid.Row="2" Text="{Binding Password}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="40" Margin="20" Watermark="Введите пароль"/>
+		<Border Grid.Row="2" Width="0" BorderBrush="Green" BorderThickness="1" Margin="10">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+			</Border.Effect>
+			<StackPanel Grid.Row="2" Orientation="Vertical">
+				<TextBox Background="White" Text="{Binding Password}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="40" Watermark="Введите пароль"/>
+			</StackPanel>
+		</Border>
+
+		<StackPanel Grid.Row="4" Height="20" VerticalAlignment="Center" >
+			<!-- Captcha Image -->
+			<UserControl Content="{Binding CaptchaImage}" Width="200" VerticalAlignment="Center" />
+		</StackPanel>
 
 		<!-- Captcha Input -->
-		<TextBox Grid.Row="3" Text="{Binding CapchaCheck}" Width="250" Height="40" Watermark="Введите капчу"/>
-
-		<!-- Captcha Image -->
-		<UserControl Grid.Row="4" Content="{Binding CaptchaImage}"/>
+		<Border Grid.Row="3" Width="0" BorderBrush="Green" BorderThickness="1" Margin="10">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+			</Border.Effect>
+			<StackPanel Grid.Row="3" Orientation="Vertical">
+				<TextBox Background="White" Grid.Row="3" Text="{Binding CapchaCheck}" Width="250" Height="40" Watermark="Введите капчу"/>
+			</StackPanel>
+		</Border>
 
 		<!-- Login Button -->
-		<Button Grid.Row="5" Content="Войти" IsEnabled="{Binding IsEnableButton}" Classes="ButtonTemplate" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="40" Margin="20" Command="{Binding LoginCommand}" />
-
+		<Border Grid.Row="6" Width="0" BorderBrush="Green" BorderThickness="1" Margin="10">
+			<Border.Effect>
+				<DropShadowEffect Color="Green" BlurRadius="15" Opacity="0.5"/>
+			</Border.Effect>
+			<StackPanel Grid.Row="6" Orientation="Vertical">
+				<Button Grid.Row="6" Content="Войти" IsEnabled="{Binding IsEnableButton}" Classes="ButtonTemplate" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="40" Command="{Binding LoginCommand}" />
+			</StackPanel>
+		</Border>
+		
 		<!-- Error Message -->
-		<TextBlock Grid.Row="6" Text="{Binding ErrorMessage}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Height="80" Margin="20" Foreground="Red"/>
+		<TextBlock Grid.Row="7" Text="{Binding ErrorMessage}" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="80" Margin="20" Foreground="Red"/>
+
 	</Grid>
 </UserControl>

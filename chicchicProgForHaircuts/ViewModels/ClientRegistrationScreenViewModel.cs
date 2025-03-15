@@ -10,8 +10,8 @@ using Tmds.DBus.Protocol;
 
 namespace chicchicProgForHaircuts.ViewModels
 {
-	public class ClientRegistrationScreenViewModel : ViewModelBase
-	{
+    public class ClientRegistrationScreenViewModel : ViewModelBase
+    {
         private GoodhaircutContext _db;
         string _firstName;
         string _secondName;
@@ -22,20 +22,30 @@ namespace chicchicProgForHaircuts.ViewModels
         private string _password;
         private string _phone;
         public string Message { get => _message; set => this.RaiseAndSetIfChanged(ref _message, value); }
-        public string Phone { get => _phone; set => this.RaiseAndSetIfChanged(ref _phone, value); }
+        public string Phone
+        {
+            get => _phone; set
+            {
+                if (value != null)
+                {
+                    this.RaiseAndSetIfChanged(ref _phone, value);
+                }
+            }
+        }
         public string FirstName { get => _firstName; set => this.RaiseAndSetIfChanged(ref _firstName, value); }
         public string SecondName { get => _secondName; set => this.RaiseAndSetIfChanged(ref _secondName, value); }
         public string Patronymic { get => _patronymic; set => this.RaiseAndSetIfChanged(ref _patronymic, value); }
         public List<Gender> Genders { get => _genders; set => this.RaiseAndSetIfChanged(ref _genders, value); }
         public string Password { get => _password; set => this.RaiseAndSetIfChanged(ref _password, value); }
         public Gender SelectedGenderEntity { get => _selectedGenderEntity; set => this.RaiseAndSetIfChanged(ref _selectedGenderEntity, value); }
-        
 
-        public ClientRegistrationScreenViewModel(GoodhaircutContext db)
+
+        public ClientRegistrationScreenViewModel(GoodhaircutContext _db)
         {
-            //LoadGenders();
+            this._db = _db;
+            LoadGenders();
         }
-        
+
         private void LoadGenders()
         {
             try
@@ -56,7 +66,7 @@ namespace chicchicProgForHaircuts.ViewModels
             if (string.IsNullOrWhiteSpace(FirstName) || string.IsNullOrWhiteSpace(SecondName) ||
                 string.IsNullOrWhiteSpace(Patronymic) || string.IsNullOrWhiteSpace(Phone) ||
                 string.IsNullOrWhiteSpace(Password))
-                
+
             {
                 Message = "¬се об€зательные пол€ должны быть заполнены.";
                 return;
@@ -78,7 +88,7 @@ namespace chicchicProgForHaircuts.ViewModels
                     Gender = SelectedGenderEntity.Id,
                     PhoneNumber = Phone,
                     VisitCount = 0,
-                    StatusId = 1,   
+                    StatusId = 1,
                     Password = Password
                 };
                 _db.Clients.Add(newClient);

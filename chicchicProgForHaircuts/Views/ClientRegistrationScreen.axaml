@@ -6,35 +6,102 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="chicchicProgForHaircuts.Views.ClientRegistrationScreen"
 			 x:DataType="vm:ClientRegistrationScreenViewModel">
-	
-  <Grid>
-	  <Grid.RowDefinitions>
-		  <RowDefinition Height="50" />
-		  <RowDefinition Height="*" />
-		  <RowDefinition Height="50" />
-	  </Grid.RowDefinitions>
 
-	  <Button Command="{Binding ExitToMainScreen}" Classes="ButtonInTemplate" Content="Назад" Margin="5" Width="80" />
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="50" />
+		</Grid.RowDefinitions>
 
-	  <TextBlock Grid.Row="0" Text="Регистрация клиента" Classes="Header" />
+		<Button Command="{Binding ExitToMainScreen}" Classes="ButtonInTemplate" Content="Назад" Margin="5" Width="80" />
 
-	  <StackPanel Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" >
-		  <TextBlock Text="Имя" />
-		  <TextBox Text="{Binding }" Width="200"/>
-		  <TextBlock Text="Фамилия" />
-		  <TextBox Text="{Binding }" Width="200"/>
-		  <TextBlock Text="Отчество" />
-		  <TextBox Text="{Binding }" Width="200"/>
-		  <TextBlock Text="Номер телефона" />
-		  <MaskedTextBox Margin="3" Text="{Binding }" Mask="7(000)000-00-00" Width="200" />
-		  <TextBlock Text="Пол" />
-		  <TextBox  Width="200"/>
-		  <TextBlock Text="Пароль" />
-		  <TextBox Text="{Binding }" Width="200"/>
-		  
-		  <Button Classes="ButtonTemplate" Content="Готово" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
-		  <!-- Error Message -->
-		  <TextBlock Grid.Row="6" Grid.ColumnSpan="2" Text="{Binding }" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="40" Margin="20" Foreground="Red"/>
-	  </StackPanel>
-  </Grid>
+		<TextBlock Grid.Row="0" Text="Регистрация клиента" Classes="Header" />
+
+		<StackPanel Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+				
+				<Border Width="0" BorderBrush="Green" BorderThickness="1">
+					<Border.Effect>
+						<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+					</Border.Effect>
+					<StackPanel Orientation="Vertical">
+						<TextBox Background="White" Text="{Binding FirstName}" Watermark="Имя" Width="200"/>
+					</StackPanel>
+				</Border>
+				
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+				<Border Width="0" BorderBrush="Green" BorderThickness="1">
+					<Border.Effect>
+						<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+					</Border.Effect>
+					<StackPanel Orientation="Vertical">
+						<TextBox Background="White" Watermark="Фамилия" Text="{Binding SecondName}" Width="200"/>
+					</StackPanel>
+				</Border>
+				
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+
+				<Border Width="0" BorderBrush="Green" BorderThickness="1">
+					<Border.Effect>
+						<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+					</Border.Effect>
+					<StackPanel Orientation="Vertical">
+						<TextBox Watermark="Отчество" Background="White" Text="{Binding Patronymic}" Width="200"/>
+					</StackPanel>
+				</Border>
+				
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+
+				<Border Width="0" BorderBrush="Green" BorderThickness="1">
+					<Border.Effect>
+						<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+					</Border.Effect>
+					<StackPanel Orientation="Vertical">
+						<MaskedTextBox Background="White" Text="{Binding Phone}" Mask="7(000)000-00-00" Width="200" />
+					</StackPanel>
+				</Border>
+				
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+				
+				<Border Width="0" BorderBrush="Green" BorderThickness="1" HorizontalAlignment="Center">
+					<Border.Effect>
+						<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+					</Border.Effect>
+					<StackPanel Orientation="Vertical">
+						<ComboBox Width="200" Background="White" ItemsSource="{Binding Genders}" SelectedItem="{Binding SelectedGenderEntity}" DisplayMemberBinding="{Binding GenderName}" HorizontalAlignment="Center" />
+					</StackPanel>
+				</Border>
+
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+
+				<Border Width="0" BorderBrush="Green" BorderThickness="1">
+					<Border.Effect>
+						<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+					</Border.Effect>
+					<StackPanel Orientation="Vertical">
+						<TextBox Background="White" Watermark="Пароль" Text="{Binding Password}" Width="200"/>
+					</StackPanel>
+				</Border>
+				
+			</StackPanel>
+
+			<Border Width="0" BorderBrush="Green" BorderThickness="1" Margin="10">
+				<Border.Effect>
+					<DropShadowEffect Color="Green" BlurRadius="15" Opacity="0.5"/>
+				</Border.Effect>
+				<StackPanel Orientation="Vertical">
+					<Button Classes="ButtonTemplate" Command="{Binding Register}" Content="Готово" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" />
+				</StackPanel>
+			</Border>
+			
+			<!-- Error Message -->
+			<TextBlock Grid.Row="6" Grid.ColumnSpan="2" Text="{Binding Message}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="40" Margin="20" Foreground="Red"/>
+		</StackPanel>
+	</Grid>
 </UserControl>

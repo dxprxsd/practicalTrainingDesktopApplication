@@ -14,13 +14,36 @@
 	</UserControl.Resources>
 
 	<Grid ColumnDefinitions="550,*" RowDefinitions="50, 30, *, 50" Margin="10">
-		<Button Content="Выйти" Width="80"  Classes="ButtonInTemplate" Command="{Binding GoToLogin}" />
+		<Border Grid.Row="0" Width="0" HorizontalAlignment="Left" BorderBrush="Green" BorderThickness="1" Margin="10">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+			</Border.Effect>
+			<StackPanel Orientation="Vertical">
+				<Button Content="Выйти" Width="80"  Classes="ButtonInTemplate" Command="{Binding GoToLogin}" />
+			</StackPanel>
+		</Border>
+		
+		
 		<TextBlock Text="Добро пожаловать!" Grid.ColumnSpan="2" Grid.Row="0" Classes="Header" HorizontalAlignment="Center" VerticalAlignment="Center" />
 		
 		<!-- Левый столбец (меню) -->
-		<StackPanel Grid.Row="2" Grid.Column="0" Spacing="20" VerticalAlignment="Center" HorizontalAlignment="Center">
-			<Button Content="Профиль" Width="180" Height="50" Classes="ButtonTemplate" />
-			<Button Content="Записаться на стрижку" Command="{Binding GoToRegOnHairCut}" Width="180" Height="50" Classes="ButtonTemplate" />
+		<StackPanel Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+			<Border Width="0" BorderBrush="Green" BorderThickness="1" Margin="10" >
+				<Border.Effect>
+					<DropShadowEffect Color="Green" BlurRadius="15" Opacity="0.5"/>
+				</Border.Effect>
+				<StackPanel Orientation="Vertical">
+					<Button Content="Профиль" Width="180" Command="{Binding GoToProfile}" Height="50" Classes="ButtonTemplate"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+				</StackPanel>
+			</Border>
+			<Border Width="0" BorderBrush="Green" BorderThickness="1" Margin="10" >
+				<Border.Effect>
+					<DropShadowEffect Color="Green" BlurRadius="15" Opacity="0.5"/>
+				</Border.Effect>
+				<StackPanel Orientation="Vertical">
+					<Button Content="Записаться на стрижку"  VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding GoToRegOnHairCut}" Width="180" Height="50" Classes="ButtonTemplate" />
+				</StackPanel>
+			</Border>
 		</StackPanel>
 
 		<TextBlock Text="Каталог" Grid.Column="1" Grid.Row="1"  FontSize="20" Classes="Default" HorizontalAlignment="Center" VerticalAlignment="Center" />

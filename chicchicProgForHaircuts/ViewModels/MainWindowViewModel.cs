@@ -33,6 +33,15 @@ namespace chicchicProgForHaircuts.ViewModels
         }
 
         /// <summary>
+        /// Контроллер текущего экрана.
+        /// </summary>
+        public int IdClient
+        {
+            get => idClient;
+            set => this.RaiseAndSetIfChanged(ref idClient, value);
+        }
+
+        /// <summary>
         /// Пол стрижки.
         /// </summary>
         public Haircutsgender Haircutsgenders
@@ -89,6 +98,8 @@ namespace chicchicProgForHaircuts.ViewModels
         public void GoToRegOnHairCut() => Us = new RegistrationOnHairCut() { DataContext = new RegistrationOnHairCutViewModel(_db) };
 
         public void GoToLogin() => Us = new LoginScreen() { DataContext = new LoginScreenViewModel(_db) };
+
+        public void GoToProfile() => Us = new UserProfileScreen() { DataContext = new UserProfileScreenViewModel(_db) };
 
         /// <summary>
         /// Загружает стрижки из базы данных.

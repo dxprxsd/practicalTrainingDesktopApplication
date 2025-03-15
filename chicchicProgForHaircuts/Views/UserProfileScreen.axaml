@@ -1,0 +1,55 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:vm="using:chicchicProgForHaircuts.ViewModels"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="chicchicProgForHaircuts.Views.UserProfileScreen"
+			 x:DataType="vm:UserProfileScreenViewModel">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="50" />
+		</Grid.RowDefinitions>
+
+		<Border Grid.Row="0" Width="0" HorizontalAlignment="Left" BorderBrush="Green" BorderThickness="1" Margin="5">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+			</Border.Effect>
+			<StackPanel Orientation="Vertical">
+				<Button Grid.Row="0" Margin="10" Command="{Binding ExitToMainScreen}" Classes="ButtonInTemplate" Content="Назад" Width="80" />
+			</StackPanel>
+		</Border>
+
+		<TextBlock Grid.Row="0" Text="Профиль" Classes="Header"/>
+
+		<StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+			<StackPanel Orientation="Horizontal">
+				<TextBlock Text="ФИО:" FontSize="18" VerticalAlignment="Center"/>
+				<TextBlock Text="{Binding CurrentClient.NameClient} {Binding CurrentClient.SurnameClient} {Binding CurrentClient.PatronymicClient}" Margin="10" VerticalAlignment="Center" FontSize="18"/>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal">
+				<!-- Phone Number -->
+				<TextBlock Text="Телефон:" FontSize="18" VerticalAlignment="Center"/>
+				<TextBlock Text="{Binding CurrentClient.PhoneNumber}" VerticalAlignment="Center" Margin="10" FontSize="18" HorizontalAlignment="Center"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal">
+				<!-- Status -->
+				<TextBlock Text="Статус:" FontSize="18" VerticalAlignment="Center" />
+				<TextBlock Text="{Binding CurrentClient.Status.StatusName}" VerticalAlignment="Center" Margin="10" FontSize="18" HorizontalAlignment="Center"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal">
+				<!-- Gender -->
+				<TextBlock Text="Пол:" FontSize="18" VerticalAlignment="Center"/>
+				<TextBlock Text="{Binding CurrentClient.GenderNavigation.GenderName}" VerticalAlignment="Center" Margin="10" FontSize="18" HorizontalAlignment="Center"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" >
+				<!-- Visit Count -->
+				<TextBlock Text="Количество посещений:" FontSize="18" VerticalAlignment="Center" />
+				<TextBlock Text="{Binding CurrentClient.VisitCount}" VerticalAlignment="Center" Margin="10" FontSize="18" HorizontalAlignment="Center"/>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</UserControl>
