@@ -3,32 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\views\\userprofilescreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\views\\userprofilescreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\viewmodels\\userprofilescreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\viewmodels\\userprofilescreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\views\\registrationonhaircut.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\views\\registrationonhaircut.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\viewmodels\\registrationonhaircutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\viewmodels\\registrationonhaircutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\viewmodels\\adminmainscreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\viewmodels\\adminmainscreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\views\\mainscreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\views\\mainscreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\views\\mainscreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\views\\mainscreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\viewmodels\\userprofilescreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\viewmodels\\userprofilescreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\views\\userprofilescreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\views\\userprofilescreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\viewmodels\\clientregistrationscreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\viewmodels\\clientregistrationscreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\views\\clientregistrationscreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\views\\clientregistrationscreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\views\\registrationonhaircut.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\views\\registrationonhaircut.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\models\\haircutsgender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\models\\haircutsgender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\models\\haircut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\models\\haircut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\viewmodels\\adminmainscreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\viewmodels\\adminmainscreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\viewmodels\\registrationonhaircutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\viewmodels\\registrationonhaircutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\views\\adminmainscreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
@@ -43,16 +59,8 @@
       "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\views\\loginscreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\viewmodels\\clientregistrationscreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\viewmodels\\clientregistrationscreenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\views\\clientregistrationscreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|solutionrelative:chicchicprogforhaircuts\\views\\clientregistrationscreen.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94EB16ED-CB4E-4FD4-A91E-489C8BC94C8B}|chicchicProgForHaircuts\\chicchicProgForHaircuts.csproj|c:\\users\\admin\\source\\repos\\chicchicprogforhaircuts\\chicchicprogforhaircuts\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,8 +86,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "chicchicProgForHaircuts\\ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAkwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T16:33:19.624Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainScreen.axaml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\MainScreen.axaml",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\MainScreen.axaml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\MainScreen.axaml",
+              "RelativeToolTip": "chicchicProgForHaircuts\\Views\\MainScreen.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-12T16:38:14.721Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -91,32 +126,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RegistrationOnHairCutViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\RegistrationOnHairCutViewModel.cs",
-              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\RegistrationOnHairCutViewModel.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\RegistrationOnHairCutViewModel.cs",
-              "RelativeToolTip": "chicchicProgForHaircuts\\ViewModels\\RegistrationOnHairCutViewModel.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAmwKMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T16:34:13.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminMainScreenViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\AdminMainScreenViewModel.cs",
-              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\AdminMainScreenViewModel.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\AdminMainScreenViewModel.cs",
-              "RelativeToolTip": "chicchicProgForHaircuts\\ViewModels\\AdminMainScreenViewModel.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T08:19:25.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "UserProfileScreen.axaml",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\UserProfileScreen.axaml",
               "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\UserProfileScreen.axaml",
@@ -128,94 +137,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserProfileScreenViewModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\UserProfileScreenViewModel.cs",
               "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\UserProfileScreenViewModel.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\UserProfileScreenViewModel.cs",
               "RelativeToolTip": "chicchicProgForHaircuts\\ViewModels\\UserProfileScreenViewModel.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwDEAAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-15T08:06:30.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegistrationOnHairCut.axaml",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\RegistrationOnHairCut.axaml",
-              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\RegistrationOnHairCut.axaml",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\RegistrationOnHairCut.axaml",
-              "RelativeToolTip": "chicchicProgForHaircuts\\Views\\RegistrationOnHairCut.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-12T16:34:03.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\MainWindowViewModel.cs",
-              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\MainWindowViewModel.cs",
-              "RelativeToolTip": "chicchicProgForHaircuts\\ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAswGQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T16:33:19.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainScreen.axaml",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\MainScreen.axaml",
-              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\MainScreen.axaml",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\MainScreen.axaml",
-              "RelativeToolTip": "chicchicProgForHaircuts\\Views\\MainScreen.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-12T16:38:14.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AdminMainScreen.axaml",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\AdminMainScreen.axaml",
-              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\AdminMainScreen.axaml",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\AdminMainScreen.axaml",
-              "RelativeToolTip": "chicchicProgForHaircuts\\Views\\AdminMainScreen.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-13T09:22:12.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginScreenViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\LoginScreenViewModel.cs",
-              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\LoginScreenViewModel.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\LoginScreenViewModel.cs",
-              "RelativeToolTip": "chicchicProgForHaircuts\\ViewModels\\LoginScreenViewModel.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAADwv2MAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T07:34:10.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LoginScreen.axaml",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\LoginScreen.axaml",
-              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\LoginScreen.axaml",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\LoginScreen.axaml",
-              "RelativeToolTip": "chicchicProgForHaircuts\\Views\\LoginScreen.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-13T08:04:12.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "ClientRegistrationScreenViewModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\ClientRegistrationScreenViewModel.cs",
               "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\ClientRegistrationScreenViewModel.cs",
@@ -228,19 +163,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "App.axaml",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\App.axaml",
-              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\App.axaml",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\App.axaml",
-              "RelativeToolTip": "chicchicProgForHaircuts\\App.axaml",
+              "DocumentIndex": 6,
+              "Title": "RegistrationOnHairCut.axaml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\RegistrationOnHairCut.axaml",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\RegistrationOnHairCut.axaml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\RegistrationOnHairCut.axaml",
+              "RelativeToolTip": "chicchicProgForHaircuts\\Views\\RegistrationOnHairCut.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-13T08:06:15.435Z",
+              "WhenOpened": "2025-03-12T16:34:03.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
+              "Title": "AdminMainScreenViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\AdminMainScreenViewModel.cs",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\AdminMainScreenViewModel.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\AdminMainScreenViewModel.cs",
+              "RelativeToolTip": "chicchicProgForHaircuts\\ViewModels\\AdminMainScreenViewModel.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAowIkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:19:25.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Haircut.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Models\\Haircut.cs",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Models\\Haircut.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Models\\Haircut.cs",
+              "RelativeToolTip": "chicchicProgForHaircuts\\Models\\Haircut.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T11:12:14.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ClientRegistrationScreen.axaml",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\ClientRegistrationScreen.axaml",
               "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\ClientRegistrationScreen.axaml",
@@ -252,7 +213,77 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Haircutsgender.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Models\\Haircutsgender.cs",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Models\\Haircutsgender.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Models\\Haircutsgender.cs",
+              "RelativeToolTip": "chicchicProgForHaircuts\\Models\\Haircutsgender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T11:12:18.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegistrationOnHairCutViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\RegistrationOnHairCutViewModel.cs",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\RegistrationOnHairCutViewModel.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\RegistrationOnHairCutViewModel.cs",
+              "RelativeToolTip": "chicchicProgForHaircuts\\ViewModels\\RegistrationOnHairCutViewModel.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAmwKMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T16:34:13.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminMainScreen.axaml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\AdminMainScreen.axaml",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\AdminMainScreen.axaml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\AdminMainScreen.axaml",
+              "RelativeToolTip": "chicchicProgForHaircuts\\Views\\AdminMainScreen.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-13T09:22:12.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginScreenViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\LoginScreenViewModel.cs",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\LoginScreenViewModel.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\LoginScreenViewModel.cs",
+              "RelativeToolTip": "chicchicProgForHaircuts\\ViewModels\\LoginScreenViewModel.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAADwv2MAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T07:34:10.191Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "LoginScreen.axaml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\LoginScreen.axaml",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\LoginScreen.axaml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\LoginScreen.axaml",
+              "RelativeToolTip": "chicchicProgForHaircuts\\Views\\LoginScreen.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-13T08:04:12.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "App.axaml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\App.axaml",
+              "RelativeDocumentMoniker": "chicchicProgForHaircuts\\App.axaml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\App.axaml",
+              "RelativeToolTip": "chicchicProgForHaircuts\\App.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-13T08:06:15.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Models\\Appointment.cs",
@@ -264,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Views\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Views\\MainWindow.axaml.cs",
@@ -276,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ViewModelBase.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\ViewModels\\ViewModelBase.cs",
               "RelativeDocumentMoniker": "chicchicProgForHaircuts\\ViewModels\\ViewModelBase.cs",
@@ -288,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\chicchicProgForHaircuts\\chicchicProgForHaircuts\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "chicchicProgForHaircuts\\Models\\Employee.cs",

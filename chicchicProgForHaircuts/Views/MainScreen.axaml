@@ -13,7 +13,7 @@
 		<conv:HairCutImageConverter x:Key="myImageConverter"/>
 	</UserControl.Resources>
 
-	<Grid ColumnDefinitions="550,*" RowDefinitions="50, 30, *, 50" Margin="10">
+	<Grid ColumnDefinitions="550,*" RowDefinitions="50, 50, *, 50" Margin="10">
 		<Border Grid.Row="0" Width="0" HorizontalAlignment="Left" BorderBrush="Green" BorderThickness="1" Margin="10">
 			<Border.Effect>
 				<DropShadowEffect BlurRadius="15" Opacity="0.5"/>
@@ -22,10 +22,10 @@
 				<Button Content="Выйти" Width="80"  Classes="ButtonInTemplate" Command="{Binding GoToLogin}" />
 			</StackPanel>
 		</Border>
-		
-		
+
+
 		<TextBlock Text="Добро пожаловать!" Grid.ColumnSpan="2" Grid.Row="0" Classes="Header" HorizontalAlignment="Center" VerticalAlignment="Center" />
-		
+
 		<!-- Левый столбец (меню) -->
 		<StackPanel Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
 			<Border Width="0" BorderBrush="Green" BorderThickness="1" Margin="10" >
@@ -46,30 +46,47 @@
 			</Border>
 		</StackPanel>
 
-		<TextBlock Text="Каталог" Grid.Column="1" Grid.Row="1"  FontSize="20" Classes="Default" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+		<StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Margin="10">
+			<TextBlock Text="Каталог" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+			<Border Width="0" BorderBrush="Green" BorderThickness="1" HorizontalAlignment="Center">
+				<Border.Effect>
+					<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+				</Border.Effect>
+				<StackPanel Orientation="Horizontal">
+					<ComboBox ItemsSource="{Binding HaircutGenders}" Background="White" Grid.Column="1" HorizontalAlignment="Left" Width="150" VerticalAlignment="Center" Grid.Row="1" DisplayMemberBinding="{Binding HairgenderName}" SelectedItem="{Binding SelectedHaircutGender}" />
+				</StackPanel>
+			</Border>
+
+		</StackPanel>
 
 		<!-- Правый столбец (список стрижек) -->
-		<ListBox Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Haircuts}">
-			<ListBox.ItemTemplate>
-				<DataTemplate>
-					<StackPanel Orientation="Horizontal" Spacing="10">
-						<!-- Фото стрижки -->
-						<Border Width="101" Height="101" BorderBrush="Black" BorderThickness="1">
-							<Image Source="{Binding Photo, Converter={StaticResource myImageConverter}}" Width="100" Height="100" />
-						</Border>
-						<StackPanel Orientation="Vertical">
-							<!-- Название стрижки -->
-							<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" />
+		<Border Grid.Column="1" Grid.Row="2" BorderBrush="Green" BorderThickness="1" >
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="20" Opacity="0.8"/>
+			</Border.Effect>
+			<ListBox Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Haircuts}">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel Orientation="Horizontal" Spacing="10">
+							<!-- Фото стрижки -->
+							<Border Width="101" Height="101" BorderBrush="Black" BorderThickness="1">
+								<Image Source="{Binding Photo, Converter={StaticResource myImageConverter}}" Width="100" Height="100" />
+							</Border>
+							<StackPanel Orientation="Vertical">
+								<!-- Название стрижки -->
+								<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" />
 
-							<!-- Пол (Gender) -->
-							<TextBlock Text="{Binding GenderNavigation.HairgenderName}" FontSize="14" />
+								<!-- Пол (Gender) -->
+								<TextBlock Text="{Binding GenderNavigation.HairgenderName}" FontSize="14" />
 
-							<!-- Цена -->
-							<TextBlock Text="{Binding Price, StringFormat='Цена: {0:C}'}" FontSize="14" Foreground="Green" />
+								<!-- Цена -->
+								<TextBlock Text="{Binding Price, StringFormat='Цена: {0:C}'}" FontSize="14" Foreground="Green" />
+							</StackPanel>
 						</StackPanel>
-					</StackPanel>
-				</DataTemplate>
-			</ListBox.ItemTemplate>
-		</ListBox>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</Border>
 	</Grid>
 </UserControl>

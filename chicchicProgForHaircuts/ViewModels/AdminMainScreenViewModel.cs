@@ -82,7 +82,6 @@ namespace chicchicProgForHaircuts.ViewModels
             MainWindowViewModel.Self.Us = new ClientRegistrationScreen() { DataContext = regClientViewModel };
         }
 
-
         /// <summary>
         /// «агружает записи о клиентах из базы данных.
         /// </summary>

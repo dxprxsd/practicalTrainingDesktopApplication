@@ -1,11 +1,10 @@
 ﻿using Avalonia.Controls;
 using chicchicProgForHaircuts.Models;
 using chicchicProgForHaircuts.Views;
-using HarfBuzzSharp;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using ReactiveUI;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -16,12 +15,13 @@ namespace chicchicProgForHaircuts.ViewModels
         private readonly GoodhaircutContext _db;
         private UserControl _us;
         public static MainWindowViewModel Self;
-        int idClient;
+        private int _idClient;
 
         private Haircut _haircut;
         private ObservableCollection<Haircut> _haircuts;
 
-        private Haircutsgender haircutsgenders;
+        private Haircutsgender _selectedHaircutGender;
+        private List<Haircutsgender> _haircutGenders;
 
         /// <summary>
         /// Контроллер текущего экрана.
@@ -33,21 +33,34 @@ namespace chicchicProgForHaircuts.ViewModels
         }
 
         /// <summary>
-        /// Контроллер текущего экрана.
+        /// Список доступных полов для стрижек.
         /// </summary>
-        public int IdClient
+        public List<Haircutsgender> HaircutGenders
         {
-            get => idClient;
-            set => this.RaiseAndSetIfChanged(ref idClient, value);
+            get => _haircutGenders;
+            set => this.RaiseAndSetIfChanged(ref _haircutGenders, value);
         }
 
         /// <summary>
-        /// Пол стрижки.
+        /// Выбранный пол для фильтрации стрижек.
         /// </summary>
-        public Haircutsgender Haircutsgenders
+        public Haircutsgender SelectedHaircutGender
         {
-            get => haircutsgenders;
-            set => this.RaiseAndSetIfChanged(ref haircutsgenders, value);
+            get => _selectedHaircutGender;
+            set
+            {
+                this.RaiseAndSetIfChanged(ref _selectedHaircutGender, value);
+                FilterHaircuts();
+            }
+        }
+
+        /// <summary>
+        /// ID клиента.
+        /// </summary>
+        public int IdClient
+        {
+            get => _idClient;
+            set => this.RaiseAndSetIfChanged(ref _idClient, value);
         }
 
         /// <summary>
@@ -59,6 +72,9 @@ namespace chicchicProgForHaircuts.ViewModels
             set => this.RaiseAndSetIfChanged(ref _haircut, value);
         }
 
+        /// <summary>
+        /// Список стрижек.
+        /// </summary>
         public ObservableCollection<Haircut> Haircuts
         {
             get => _haircuts;
@@ -70,27 +86,42 @@ namespace chicchicProgForHaircuts.ViewModels
             _db = db;
             Self = this;
             Us = new LoginScreen() { DataContext = new LoginScreenViewModel(_db) };
-            // Загружаем стрижки и подгружаем данные о поле (GenderNavigation)
-            Haircuts = new ObservableCollection<Haircut>(
-                _db.Haircuts.Include(x => x.GenderNavigation).ToList()
-            );
+            LoadData();
         }
 
-//        public MainWindowViewModel(GoodhaircutContext db, int idClient)
-//        {
+        /// <summary>
+        /// Загружает данные стрижек и полов из базы данных.
+        /// </summary>
+        private void LoadData()
+        {
+            // Добавляем "Все виды" в список полов
+            var allGenders = new Haircutsgender { Id = 0, HairgenderName = "Все виды" };
+            HaircutGenders = new List<Haircutsgender> { allGenders };
+            HaircutGenders.AddRange(_db.Haircutsgenders.ToList());
 
-//            this.idClient = idClient;
-//            Self = this;
-//            Us = new MainScreen() { DataContext = new MainWindowViewModel(_db) };
-//            //Us = new MainScreen();
-//            //Us = new AdminMainScreen();
-//            //Us = new RegistrationOnHairCut();
-//            _db = db;
-//            Haircuts = new ObservableCollection<Haircut>(
-//    db.Haircuts.Include(x => x.GenderNavigation).ToList()
-//);
+            Haircuts = new ObservableCollection<Haircut>(_db.Haircuts.Include(x => x.GenderNavigation).ToList());
 
-//        }
+            // По умолчанию выбираем "Все виды"
+            SelectedHaircutGender = allGenders;
+        }
+
+        /// <summary>
+        /// Фильтрует стрижки по выбранному полу.
+        /// </summary>
+        private void FilterHaircuts()
+        {
+            if (SelectedHaircutGender != null && SelectedHaircutGender.Id != 0)
+            {
+                Haircuts = new ObservableCollection<Haircut>(_db.Haircuts
+                    .Include(x => x.GenderNavigation)
+                    .Where(x => x.Gender == SelectedHaircutGender.Id)
+                    .ToList());
+            }
+            else
+            {
+                Haircuts = new ObservableCollection<Haircut>(_db.Haircuts.Include(x => x.GenderNavigation).ToList());
+            }
+        }
 
         /// <summary>
         /// Переход на основной экран приложения.
@@ -100,17 +131,5 @@ namespace chicchicProgForHaircuts.ViewModels
         public void GoToLogin() => Us = new LoginScreen() { DataContext = new LoginScreenViewModel(_db) };
 
         public void GoToProfile() => Us = new UserProfileScreen() { DataContext = new UserProfileScreenViewModel(_db) };
-
-        /// <summary>
-        /// Загружает стрижки из базы данных.
-        /// </summary>
-        private void LoadHaircuts()
-        {
-            var haircutsFromDb = _db.Haircuts
-                                    .Include(x => x.GenderNavigation) // Загружаем пол
-                                    .ToList();
-            Haircuts = new ObservableCollection<Haircut>(haircutsFromDb);
-        }
-
     }
 }

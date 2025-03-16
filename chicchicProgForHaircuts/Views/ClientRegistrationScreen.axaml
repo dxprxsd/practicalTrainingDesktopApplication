@@ -14,7 +14,16 @@
 			<RowDefinition Height="50" />
 		</Grid.RowDefinitions>
 
-		<Button Command="{Binding ExitToMainScreen}" Classes="ButtonInTemplate" Content="Назад" Margin="5" Width="80" />
+
+		<Border HorizontalAlignment="Left" Width="0" BorderBrush="Green" BorderThickness="1" Margin="10">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="15" Opacity="0.5"/>
+			</Border.Effect>
+			<StackPanel Orientation="Vertical">
+				<Button Command="{Binding ExitToMainScreen}" HorizontalAlignment="Left" Classes="ButtonInTemplate" Content="Назад" Margin="5" Width="80" />
+			</StackPanel>
+		</Border>
+		
 
 		<TextBlock Grid.Row="0" Text="Регистрация клиента" Classes="Header" />
 
