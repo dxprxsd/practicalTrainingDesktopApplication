@@ -6,8 +6,8 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="chicchicProgForHaircuts.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/MiniIcon.png"
-        Title="Парикмахерская 'Chic-Chic'">
+        Icon="/Assets/aphexlogo.png"
+        Title="Парикмахерская Aphex">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>

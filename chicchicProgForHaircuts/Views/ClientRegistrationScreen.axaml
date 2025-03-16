@@ -14,6 +14,11 @@
 			<RowDefinition Height="50" />
 		</Grid.RowDefinitions>
 
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="2*" />
+			<ColumnDefinition Width="1*" />
+		</Grid.ColumnDefinitions>
+
 
 		<Border HorizontalAlignment="Left" Width="0" BorderBrush="Green" BorderThickness="1" Margin="10">
 			<Border.Effect>
@@ -27,7 +32,7 @@
 
 		<TextBlock Grid.Row="0" Text="Регистрация клиента" Classes="Header" />
 
-		<StackPanel Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+		<StackPanel Grid.Row="1" Grid.Column="0"  HorizontalAlignment="Center" VerticalAlignment="Center" >
 			<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
 				
 				<Border Width="0" BorderBrush="Green" BorderThickness="1">
@@ -111,6 +116,22 @@
 			
 			<!-- Error Message -->
 			<TextBlock Grid.Row="6" Grid.ColumnSpan="2" Text="{Binding Message}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="40" Margin="20" Foreground="Red"/>
+		</StackPanel>
+
+		<!-- Памятка для надежного пароля -->
+		<StackPanel Grid.Row="0" Grid.Column="1" Width="330" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+			<Border  BorderBrush="Green" BorderThickness="1" Margin="10">
+				<Border.Effect>
+					<DropShadowEffect Color="Green" BlurRadius="15" Opacity="0.5"/>
+				</Border.Effect>
+				<StackPanel Orientation="Vertical">
+					<TextBlock Background="White" Text=" Памятка по созданию надежного пароля: " />
+					<TextBlock Background="White" Text=" • Заглавные и строчные буквы;"/>
+					<TextBlock Background="White" Text=" • Не менее 6 символов;"/>
+					<TextBlock Background="White" Text=" • Не менее одного спецсимвола;"/>
+					<TextBlock Background="White" Text=" • Не менее одной цифры."/>
+				</StackPanel>
+			</Border>
 		</StackPanel>
 	</Grid>
 </UserControl>

@@ -21,3 +21,11 @@ Client Name | Employee Name | Haircut Name | Appointment Date | Final Price
 
 Самая популярная прическа: Канадка
 Количество заказов: 5
+
+
+
+
+
+
+
+
