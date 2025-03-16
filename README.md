@@ -1,6 +1,6 @@
 # Aphex - Настольное приложение для парикмахерской 
 
-![Icon](chicchicProgForHaircuts/Materials/Icon/aphexlogo.png)
+![Icon](chicchicProgForHaircuts/Materials/Icon/AphexLogoNew.png)
 
 Приложение "Chic-Chic" позволяет пользователям записываться на стрижку, выбирать парикмахеров и стрижки, а также управлять временем записи.
 
