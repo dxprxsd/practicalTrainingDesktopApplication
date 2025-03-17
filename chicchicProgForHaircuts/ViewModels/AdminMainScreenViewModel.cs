@@ -116,7 +116,7 @@ namespace chicchicProgForHaircuts.ViewModels
             // Открываем StreamWriter для записи в файл
             using (StreamWriter writer = new StreamWriter(filePath))
             {
-                writer.WriteLine("Client Name | Employee Name | Haircut Name | Appointment Date | Final Price");
+                writer.WriteLine("Имя клиента | Имя парикмахера | Название стрижки | Дата стрижки | Итоговая цена");
 
                 foreach (var appointment in Appointments)
                 {
@@ -125,7 +125,7 @@ namespace chicchicProgForHaircuts.ViewModels
 
                 // Печатаем самую популярную прическу
                 writer.WriteLine();
-                writer.WriteLine($"Самая популярная прическа: {popularHaircutName}");
+                writer.WriteLine($"Самая популярная стрижка: {popularHaircutName}");
                 writer.WriteLine($"Количество заказов: {popularHaircutCount}");
             }
 
