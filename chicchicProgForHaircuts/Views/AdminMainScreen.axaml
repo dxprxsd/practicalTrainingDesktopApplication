@@ -7,11 +7,10 @@
              x:Class="chicchicProgForHaircuts.Views.AdminMainScreen"
              x:DataType="vm:AdminMainScreenViewModel">
 
-	
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*" />
-			<ColumnDefinition Width="490" />
+			<ColumnDefinition Width="440" />
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="50" />
@@ -51,10 +50,10 @@
 					<StackPanel Orientation="Horizontal" Spacing="10">
 
 						<!-- Client Name -->
-						<TextBlock Text="{Binding Client.NameClient}" Width="100" VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding Client.NameClient}" Width="80" VerticalAlignment="Center"/>
 
 						<!-- Employee Name -->
-						<TextBlock Text="{Binding Employee.NameEmployee}" Width="100" VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding Employee.NameEmployee}" Width="80" VerticalAlignment="Center"/>
 
 						<!-- Haircut Name -->
 						<TextBlock Text="{Binding Haircut.Name}" Width="160" VerticalAlignment="Center"/>
@@ -62,9 +61,14 @@
 						<!-- Appointment Date -->
 						<TextBlock Text="{Binding AppointmentDate}" Width="150" VerticalAlignment="Center"/>
 
+						<!-- статус -->
+						<TextBlock Text="{Binding Appointmentsstatus.StatusapName}" Width="80" VerticalAlignment="Center"/>
+
 						<!-- Final Price -->
-						<TextBlock Text="{Binding FinalPrice}" Width="120" VerticalAlignment="Center"/>
-					</StackPanel>
+						<TextBlock Text="{Binding FinalPrice}" Width="50" VerticalAlignment="Center"/>
+
+						<Button Content="Изменить статус" Command="{Binding $parent[ListBox].((vm:AdminMainScreenViewModel)DataContext).OpenStatusWindowCommand}" CommandParameter="{Binding Id}" Width="120" Classes="ButtonInTemplate" />
+					</StackPanel> 
 				</DataTemplate>
 			</ListBox.ItemTemplate>
 		</ListBox>
@@ -89,19 +93,16 @@
 					<StackPanel Orientation="Horizontal" Spacing="10">
 
 						<!-- Client Name -->
-						<TextBlock Text="{Binding NameClient}" Width="100" VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding NameClient}" Width="80" VerticalAlignment="Center"/>
 
 						<!-- Client SurName -->
-						<TextBlock Text="{Binding SurnameClient}" Width="100" VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding SurnameClient}" Width="80" VerticalAlignment="Center"/>
 
 						<!-- Client Patronymic -->
-						<TextBlock Text="{Binding PatronymicClient}" Width="100" VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding PatronymicClient}" Width="80" VerticalAlignment="Center"/>
 
 						<!-- Client gender -->
-						<TextBlock Text="{Binding GenderNavigation.GenderName}" Width="200" VerticalAlignment="Center"/>
-
-						<!-- Haircut Name -->
-						<TextBlock Text="{Binding Status.StatusName}" Width="200" VerticalAlignment="Center"/>
+						<TextBlock Text="{Binding GenderNavigation.GenderName}" Width="80" VerticalAlignment="Center"/>
 
 						<!-- Appointment Date -->
 						<TextBlock Text="{Binding VisitCount}" Width="150" VerticalAlignment="Center"/>

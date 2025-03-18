@@ -17,6 +17,8 @@ public partial class GoodhaircutContext : DbContext
 
     public virtual DbSet<Appointment> Appointments { get; set; }
 
+    public virtual DbSet<Appointmentsstatus> Appointmentsstatuses { get; set; }
+
     public virtual DbSet<Client> Clients { get; set; }
 
     public virtual DbSet<Clientstatus> Clientstatuses { get; set; }
@@ -47,10 +49,16 @@ public partial class GoodhaircutContext : DbContext
             entity.Property(e => e.AppointmentDate)
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("appointment_date");
+            entity.Property(e => e.AppointmentsstatusId).HasColumnName("appointmentsstatus_id");
             entity.Property(e => e.ClientId).HasColumnName("client_id");
             entity.Property(e => e.EmployeeId).HasColumnName("employee_id");
             entity.Property(e => e.FinalPrice).HasColumnName("final_price");
             entity.Property(e => e.HaircutId).HasColumnName("haircut_id");
+
+            entity.HasOne(d => d.Appointmentsstatus).WithMany(p => p.Appointments)
+                .HasForeignKey(d => d.AppointmentsstatusId)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("appointments_appointmentsstatus_id_fkey");
 
             entity.HasOne(d => d.Client).WithMany(p => p.Appointments)
                 .HasForeignKey(d => d.ClientId)
@@ -66,6 +74,18 @@ public partial class GoodhaircutContext : DbContext
                 .HasForeignKey(d => d.HaircutId)
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("appointments_haircut_id_fkey");
+        });
+
+        modelBuilder.Entity<Appointmentsstatus>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("appointmentsstatus_pkey");
+
+            entity.ToTable("appointmentsstatus");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.StatusapName)
+                .HasMaxLength(50)
+                .HasColumnName("statusap_name");
         });
 
         modelBuilder.Entity<Client>(entity =>

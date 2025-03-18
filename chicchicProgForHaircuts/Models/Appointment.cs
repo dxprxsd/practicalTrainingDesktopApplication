@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace chicchicProgForHaircuts.Models;
 
@@ -17,9 +18,15 @@ public partial class Appointment
 
     public double? FinalPrice { get; set; }
 
+    public int? AppointmentsstatusId { get; set; }
+
+    public virtual Appointmentsstatus? Appointmentsstatus { get; set; }
+
     public virtual Client? Client { get; set; }
 
     public virtual Employee? Employee { get; set; }
 
     public virtual Haircut? Haircut { get; set; }
+
+
 }

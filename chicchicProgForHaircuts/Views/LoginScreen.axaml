@@ -67,7 +67,7 @@
 		</Border>
 		
 		<!-- Error Message -->
-		<TextBlock Grid.Row="7" Text="{Binding ErrorMessage}" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="80" Margin="20" Foreground="Red"/>
+		<TextBlock Grid.Row="7" Text="{Binding ErrorMessage}" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Height="80" Margin="20" Foreground="Red"/>
 
 	</Grid>
 </UserControl>

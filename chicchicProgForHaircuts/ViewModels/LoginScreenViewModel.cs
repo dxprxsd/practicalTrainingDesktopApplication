@@ -175,7 +175,7 @@ namespace chicchicProgForHaircuts.ViewModels
         /// <summary>
         /// Переход на экран администратора.
         /// </summary>
-        public void GoToAdminMainScreen() => MainWindowViewModel.Self.Us = new AdminMainScreen();
+        public void GoToAdminMainScreen() => MainWindowViewModel.Self.Us = new AdminMainScreen() { DataContext = new AdminMainScreenViewModel(_db) };
 
         /// <summary>
         /// Метод для генерации капчи.

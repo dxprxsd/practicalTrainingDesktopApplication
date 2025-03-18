@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:vm="using:chicchicProgForHaircuts.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="chicchicProgForHaircuts.ChangesStatusWindow"
+		x:DataType="vm:ChangesStatusWindowViewModel"
+        Title="ChangesStatusWindow"
+		Width="400" Height="300">
+	
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="50" />
+		</Grid.RowDefinitions>
+		<StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1">
+			<TextBlock Text="Выберите статус заказа" Classes="Header" HorizontalAlignment="Center" />
+			
+			<ComboBox
+			Width="200"
+			Background="White"
+			ItemsSource="{Binding AvailableStatuses}"
+			SelectedItem="{Binding SelectedappointmentsstatusEntity}"
+			DisplayMemberBinding="{Binding StatusapName}"
+			HorizontalAlignment="Center"
+			Margin="10"/>
+
+			<Button Content="Подтвердить" Command="{Binding ConfirmStatus}" Width="120" Classes="ButtonTemplate" HorizontalAlignment="Center" Margin="10" />
+
+			
+		</StackPanel>
+		<!-- Error Message -->
+		<TextBlock Grid.Row="2" Text="{Binding ErrorMessage}" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="80" Margin="20" Foreground="Red"/>
+
+	</Grid>
+</Window>

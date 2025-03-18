@@ -148,7 +148,8 @@ namespace chicchicProgForHaircuts.ViewModels
                 EmployeeId = SelectedEmployee.Id,
                 HaircutId = SelectedHaircut.Id,
                 AppointmentDate = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified),
-                FinalPrice = FinalPrice
+                FinalPrice = FinalPrice,
+                AppointmentsstatusId = 1,
             };
 
             _db.Appointments.Add(appointment);
